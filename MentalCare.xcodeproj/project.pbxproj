@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35E16BD9292B0AF700A79F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E16BD8292B0AF700A79F4F /* AppDelegate.swift */; };
+		35E16BDB292B0AF700A79F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E16BDA292B0AF700A79F4F /* SceneDelegate.swift */; };
+		35E16BDD292B0AF700A79F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E16BDC292B0AF700A79F4F /* ViewController.swift */; };
+		35E16BE0292B0AF700A79F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E16BDE292B0AF700A79F4F /* Main.storyboard */; };
+		35E16BE2292B0AF800A79F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E16BE1292B0AF800A79F4F /* Assets.xcassets */; };
+		35E16BE5292B0AF800A79F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E16BE3292B0AF800A79F4F /* LaunchScreen.storyboard */; };
+		35E53E57292B1BC2009E5BE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E53E56292B1BC2009E5BE6 /* LoginViewController.swift */; };
+		35E74227292C5B0B00DAFAE2 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E74226292C5B0A00DAFAE2 /* PasswordTextField.swift */; };
+		35E7422A292C5BCA00DAFAE2 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E74229292C5BCA00DAFAE2 /* LoginButton.swift */; };
+		35E7422E292C5C8900DAFAE2 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7422D292C5C8900DAFAE2 /* RegisterButton.swift */; };
+		35E74231292C601300DAFAE2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E74230292C601300DAFAE2 /* RegisterViewController.swift */; };
+		35E74234292C8BF500DAFAE2 /* UserNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E74233292C8BF500DAFAE2 /* UserNameTextField.swift */; };
+		35ED80E3292B123400C43B7B /* ButtonClickStyle in Frameworks */ = {isa = PBXBuildFile; productRef = 35ED80E2292B123400C43B7B /* ButtonClickStyle */; };
+		35ED80E6292B126000C43B7B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 35ED80E5292B126000C43B7B /* SQLite */; };
+		35F3B97B292B44B2002042D3 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3B97A292B44B2002042D3 /* EmailTextField.swift */; };
+		791B73C26CCF0E3E56F6C4C4 /* Pods_MentalCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		35E16BD5292B0AF700A79F4F /* MentalCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E16BD8292B0AF700A79F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		35E16BDA292B0AF700A79F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		35E16BDC292B0AF700A79F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35E16BDF292B0AF700A79F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35E16BE1292B0AF800A79F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35E16BE4292B0AF800A79F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35E16BE6292B0AF800A79F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E53E56292B1BC2009E5BE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35E74226292C5B0A00DAFAE2 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		35E74229292C5BCA00DAFAE2 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		35E7422D292C5C8900DAFAE2 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
+		35E74230292C601300DAFAE2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		35E74233292C8BF500DAFAE2 /* UserNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextField.swift; sourceTree = "<group>"; };
+		35F3B97A292B44B2002042D3 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		A7AAF6AC937C0297F62B4A61 /* Pods-MentalCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentalCare.debug.xcconfig"; path = "Target Support Files/Pods-MentalCare/Pods-MentalCare.debug.xcconfig"; sourceTree = "<group>"; };
+		CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentalCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACFEF7F77F8667B92BD7B97 /* Pods-MentalCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentalCare.release.xcconfig"; path = "Target Support Files/Pods-MentalCare/Pods-MentalCare.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35E16BD2292B0AF700A79F4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35ED80E6292B126000C43B7B /* SQLite in Frameworks */,
+				791B73C26CCF0E3E56F6C4C4 /* Pods_MentalCare.framework in Frameworks */,
+				35ED80E3292B123400C43B7B /* ButtonClickStyle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35E16BCC292B0AF700A79F4F = {
+			isa = PBXGroup;
+			children = (
+				35E16BD7292B0AF700A79F4F /* MentalCare */,
+				35E16BD6292B0AF700A79F4F /* Products */,
+				B2B9666F4C9B203B75A78DD3 /* Pods */,
+				AC510565D89B8284210B7F4E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		35E16BD6292B0AF700A79F4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35E16BD5292B0AF700A79F4F /* MentalCare.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35E16BD7292B0AF700A79F4F /* MentalCare */ = {
+			isa = PBXGroup;
+			children = (
+				35E53E53292B1B5C009E5BE6 /* Model */,
+				35E53E54292B1B63009E5BE6 /* View */,
+				35E53E55292B1B6B009E5BE6 /* Controller */,
+				35E16BDA292B0AF700A79F4F /* SceneDelegate.swift */,
+				35E16BD8292B0AF700A79F4F /* AppDelegate.swift */,
+				35E16BDC292B0AF700A79F4F /* ViewController.swift */,
+				35E16BDE292B0AF700A79F4F /* Main.storyboard */,
+				35E16BE1292B0AF800A79F4F /* Assets.xcassets */,
+				35E16BE3292B0AF800A79F4F /* LaunchScreen.storyboard */,
+				35E16BE6292B0AF800A79F4F /* Info.plist */,
+			);
+			path = MentalCare;
+			sourceTree = "<group>";
+		};
+		35E53E53292B1B5C009E5BE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35E74228292C5BBB00DAFAE2 /* Button */,
+				35F3B978292B4475002042D3 /* TextField */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35E53E54292B1B63009E5BE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35E53E55292B1B6B009E5BE6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35E7422F292C5EE600DAFAE2 /* Register */,
+				35E53E58292B1BD1009E5BE6 /* Login */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35E53E58292B1BD1009E5BE6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				35E53E56292B1BC2009E5BE6 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		35E74225292C5AF400DAFAE2 /* PasswordTextField */ = {
+			isa = PBXGroup;
+			children = (
+				35E74226292C5B0A00DAFAE2 /* PasswordTextField.swift */,
+			);
+			path = PasswordTextField;
+			sourceTree = "<group>";
+		};
+		35E74228292C5BBB00DAFAE2 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				35E7422C292C5C6D00DAFAE2 /* RegisterButton */,
+				35E7422B292C5C6100DAFAE2 /* LoginButton */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		35E7422B292C5C6100DAFAE2 /* LoginButton */ = {
+			isa = PBXGroup;
+			children = (
+				35E74229292C5BCA00DAFAE2 /* LoginButton.swift */,
+			);
+			path = LoginButton;
+			sourceTree = "<group>";
+		};
+		35E7422C292C5C6D00DAFAE2 /* RegisterButton */ = {
+			isa = PBXGroup;
+			children = (
+				35E7422D292C5C8900DAFAE2 /* RegisterButton.swift */,
+			);
+			path = RegisterButton;
+			sourceTree = "<group>";
+		};
+		35E7422F292C5EE600DAFAE2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				35E74230292C601300DAFAE2 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		35E74232292C8BDF00DAFAE2 /* UserNameTextField */ = {
+			isa = PBXGroup;
+			children = (
+				35E74233292C8BF500DAFAE2 /* UserNameTextField.swift */,
+			);
+			path = UserNameTextField;
+			sourceTree = "<group>";
+		};
+		35F3B978292B4475002042D3 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				35E74232292C8BDF00DAFAE2 /* UserNameTextField */,
+				35E74225292C5AF400DAFAE2 /* PasswordTextField */,
+				35F3B979292B448D002042D3 /* EmailTextField */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		35F3B979292B448D002042D3 /* EmailTextField */ = {
+			isa = PBXGroup;
+			children = (
+				35F3B97A292B44B2002042D3 /* EmailTextField.swift */,
+			);
+			path = EmailTextField;
+			sourceTree = "<group>";
+		};
+		AC510565D89B8284210B7F4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2B9666F4C9B203B75A78DD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7AAF6AC937C0297F62B4A61 /* Pods-MentalCare.debug.xcconfig */,
+				FACFEF7F77F8667B92BD7B97 /* Pods-MentalCare.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35E16BD4292B0AF700A79F4F /* MentalCare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35E16BE9292B0AF800A79F4F /* Build configuration list for PBXNativeTarget "MentalCare" */;
+			buildPhases = (
+				F096E4BD59DB237EFE8115FE /* [CP] Check Pods Manifest.lock */,
+				35E16BD1292B0AF700A79F4F /* Sources */,
+				35E16BD2292B0AF700A79F4F /* Frameworks */,
+				35E16BD3292B0AF700A79F4F /* Resources */,
+				E069117C4799D02E6A06C35E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MentalCare;
+			packageProductDependencies = (
+				35ED80E2292B123400C43B7B /* ButtonClickStyle */,
+				35ED80E5292B126000C43B7B /* SQLite */,
+			);
+			productName = MentalCare;
+			productReference = 35E16BD5292B0AF700A79F4F /* MentalCare.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35E16BCD292B0AF700A79F4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					35E16BD4292B0AF700A79F4F = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 35E16BD0292B0AF700A79F4F /* Build configuration list for PBXProject "MentalCare" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35E16BCC292B0AF700A79F4F;
+			packageReferences = (
+				35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */,
+				35ED80E4292B126000C43B7B /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
+			productRefGroup = 35E16BD6292B0AF700A79F4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35E16BD4292B0AF700A79F4F /* MentalCare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35E16BD3292B0AF700A79F4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35E16BE5292B0AF800A79F4F /* LaunchScreen.storyboard in Resources */,
+				35E16BE2292B0AF800A79F4F /* Assets.xcassets in Resources */,
+				35E16BE0292B0AF700A79F4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E069117C4799D02E6A06C35E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MentalCare/Pods-MentalCare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MentalCare/Pods-MentalCare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MentalCare/Pods-MentalCare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F096E4BD59DB237EFE8115FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MentalCare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35E16BD1292B0AF700A79F4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35E74231292C601300DAFAE2 /* RegisterViewController.swift in Sources */,
+				35E74234292C8BF500DAFAE2 /* UserNameTextField.swift in Sources */,
+				35E7422E292C5C8900DAFAE2 /* RegisterButton.swift in Sources */,
+				35E53E57292B1BC2009E5BE6 /* LoginViewController.swift in Sources */,
+				35E16BDD292B0AF700A79F4F /* ViewController.swift in Sources */,
+				35E7422A292C5BCA00DAFAE2 /* LoginButton.swift in Sources */,
+				35E74227292C5B0B00DAFAE2 /* PasswordTextField.swift in Sources */,
+				35F3B97B292B44B2002042D3 /* EmailTextField.swift in Sources */,
+				35E16BD9292B0AF700A79F4F /* AppDelegate.swift in Sources */,
+				35E16BDB292B0AF700A79F4F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		35E16BDE292B0AF700A79F4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35E16BDF292B0AF700A79F4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35E16BE3292B0AF800A79F4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35E16BE4292B0AF800A79F4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35E16BE7292B0AF800A79F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		35E16BE8292B0AF800A79F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35E16BEA292B0AF800A79F4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7AAF6AC937C0297F62B4A61 /* Pods-MentalCare.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HD6XYY787U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MentalCare/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KOKIHAMADA.MentalCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35E16BEB292B0AF800A79F4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FACFEF7F77F8667B92BD7B97 /* Pods-MentalCare.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HD6XYY787U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MentalCare/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KOKIHAMADA.MentalCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35E16BD0292B0AF700A79F4F /* Build configuration list for PBXProject "MentalCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35E16BE7292B0AF800A79F4F /* Debug */,
+				35E16BE8292B0AF800A79F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35E16BE9292B0AF800A79F4F /* Build configuration list for PBXNativeTarget "MentalCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35E16BEA292B0AF800A79F4F /* Debug */,
+				35E16BEB292B0AF800A79F4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mrustaa/ButtonClickStyle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		35ED80E4292B126000C43B7B /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		35ED80E2292B123400C43B7B /* ButtonClickStyle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */;
+			productName = ButtonClickStyle;
+		};
+		35ED80E5292B126000C43B7B /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35ED80E4292B126000C43B7B /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 35E16BCD292B0AF700A79F4F /* Project object */;
+}
