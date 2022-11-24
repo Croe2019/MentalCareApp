@@ -9,16 +9,24 @@ import Foundation
 import UIKit
 import TextFieldEffects
 
+@available(iOS 13.0, *)
 class UserNameTextField{
+    
+    let x = PositionX()
+    let y = PositionY()
+    var position_x = Int()
+    var position_y = Int()
     
     public func CreateUserNameTextField(user_name_text_field: YoshikoTextField){
         
-        // メールアドレスのテキストフィールドの設定
-        user_name_text_field.frame = CGRect(x: 100, y: 100, width: 150, height: 50)
-        user_name_text_field.placeholder = "メールアドレスを入力してください"
+        // 名前のテキストフィールドの設定
+        position_x = x.PositionSetting(x: 50)
+        position_y = y.PositionSetting(y: 180)
+        user_name_text_field.frame = CGRect(x: position_x, y: position_y, width: 250, height: 50)
+        user_name_text_field.placeholder = "名前を入力してください"
         user_name_text_field.placeholderFontScale = 0.5
         user_name_text_field.placeholderColor = .darkGray
         user_name_text_field.textColor = .darkGray
-        user_name_text_field.activeBorderColor = .darkGray
+        user_name_text_field.activeBorderColor = .link
     }
 }

@@ -8,4 +8,5 @@ target 'MentalCare' do
   # Pods for MentalCare
  pod 'TextFieldEffects'
  pod 'Material'
+ pod 'LTMorphingLabel'
 end
