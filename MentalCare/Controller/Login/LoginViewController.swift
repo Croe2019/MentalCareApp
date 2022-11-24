@@ -8,7 +8,9 @@
 import UIKit
 import TextFieldEffects
 import Material
+import LTMorphingLabel
 
+@available(iOS 13.0, *)
 class LoginViewController: UIViewController {
     
     var email_text_field = YoshikoTextField()
@@ -19,16 +21,20 @@ class LoginViewController: UIViewController {
     let login_button_model = LoginButton()
     var register_button = RaisedButton()
     let register_button_model = RegisterButton()
+    var login_label = LTMorphingLabel()
+    let login_label_model = LoginLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // UIパーツの設定はクラスで管理する
-        email_text_field_model.CreateEmailTextField(email_text_field: email_text_field)
-        password_text_field_model.CreatePasswordTextField(password_text_field: password_text_field)
+        email_text_field_model.CreateLoginEmailTextField(email_text_field: email_text_field)
+        password_text_field_model.CreateLoginPasswordTextField(password_text_field: password_text_field)
         login_button_model.CreateLoginButton(login_button: login_button)
         register_button_model.CreateRegisterButton(register_button: register_button)
+        login_label_model.LoginLabel(login_label: login_label)
         
+        view.addSubview(login_label)
         view.addSubview(email_text_field)
         view.addSubview(password_text_field)
         view.addSubview(login_button)

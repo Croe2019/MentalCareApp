@@ -13,10 +13,11 @@ class RegisterButton{
     
     public func CreateRegisterButton(register_button: RaisedButton){
         
-        register_button.title = "ユーザー登録"
+        register_button.title = "アカウントを作成"
         register_button.titleColor = .white
         register_button.pulseColor = .white
         register_button.backgroundColor = Color.blue.base
-        register_button.frame = CGRect(x: 100, y: 400, width: 150, height: 50)
+        register_button.cornerRadiusPreset = .cornerRadius7
+        register_button.frame = CGRect(x: 50, y: 400, width: 250, height: 50)
     }
 }

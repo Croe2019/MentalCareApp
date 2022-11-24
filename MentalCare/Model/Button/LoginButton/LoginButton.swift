@@ -18,6 +18,7 @@ class LoginButton{
         login_button.titleColor = .white
         login_button.pulseColor = .white
         login_button.backgroundColor = Color.blue.base
-        login_button.frame = CGRect(x: 100, y: 300, width: 150, height: 50)
+        login_button.cornerRadiusPreset = .cornerRadius7
+        login_button.frame = CGRect(x: 50, y: 300, width: 250, height: 50)
     }
 }

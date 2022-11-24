@@ -9,16 +9,38 @@ import Foundation
 import UIKit
 import TextFieldEffects
 
+@available(iOS 13.0, *)
 class PasswordTextField{
     
-    public func CreatePasswordTextField(password_text_field: YoshikoTextField){
+    let x = PositionX()
+    let y = PositionY()
+    var position_x = Int()
+    var position_y = Int()
+    
+    public func CreateLoginPasswordTextField(password_text_field: YoshikoTextField){
         
-        password_text_field.frame = CGRect(x: 100, y: 300, width: 150, height: 50)
+        // ここで各画面ごとに位置を設定する
+        position_x = x.PositionSetting(x: 50)
+        position_y = y.PositionSetting(y: 200)
+        password_text_field.frame = CGRect(x: position_x, y: position_y, width: 250, height: 50)
         password_text_field.placeholder = "パスワードを入力してください"
         password_text_field.placeholderFontScale = 0.5
         password_text_field.placeholderColor = .darkGray
         password_text_field.textColor = .darkGray
-        password_text_field.activeBorderColor = .darkGray
+        password_text_field.activeBorderColor = .link
+        password_text_field.isSecureTextEntry = true
+    }
+    
+    public func CreateRegisterPasswordTextField(password_text_field: YoshikoTextField){
+        
+        position_x = x.PositionSetting(x: 50)
+        position_y = y.PositionSetting(y: 280)
+        password_text_field.frame = CGRect(x: position_x, y: position_y, width: 250, height: 50)
+        password_text_field.placeholder = "パスワードを入力してください"
+        password_text_field.placeholderFontScale = 0.5
+        password_text_field.placeholderColor = .darkGray
+        password_text_field.textColor = .darkGray
+        password_text_field.activeBorderColor = .link
         password_text_field.isSecureTextEntry = true
     }
 }

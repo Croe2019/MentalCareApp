@@ -1,4 +1,5 @@
 PODS:
+  - LTMorphingLabel (0.9.3)
   - Material (3.1.8):
     - Material/Core (= 3.1.8)
   - Material/Core (3.1.8):
@@ -9,20 +10,23 @@ PODS:
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
+  - LTMorphingLabel
   - Material
   - TextFieldEffects
 
 SPEC REPOS:
   trunk:
+    - LTMorphingLabel
     - Material
     - Motion
     - TextFieldEffects
 
 SPEC CHECKSUMS:
+  LTMorphingLabel: f2b256e4fe665aac27f0d0e8ccdcd79590f0cd70
   Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: a1d929078c4c2f36626c80eca7d74d9e30c47d07
+PODFILE CHECKSUM: 4a1ccac45a0485c68aaa8bb68da49af49be83a0a
 
 COCOAPODS: 1.11.3
