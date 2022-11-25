@@ -15,7 +15,7 @@ class RegisterLabel{
         
         register_label.fontSize = 40
         register_label.frame = CGRect(x: 130, y: -30, width: 300, height: 300)
-        register_label.text = "新規登録"
+        register_label.text = "Register"
         register_label.morphingEffect = .sparkle
     }
 }

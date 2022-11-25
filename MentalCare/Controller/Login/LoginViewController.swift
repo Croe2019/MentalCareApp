@@ -13,9 +13,9 @@ import LTMorphingLabel
 @available(iOS 13.0, *)
 class LoginViewController: UIViewController {
     
-    var email_text_field = YoshikoTextField()
+    var email_text_field = HoshiTextField()
     let email_text_field_model = EmailTextField()
-    var password_text_field = YoshikoTextField()
+    var password_text_field = HoshiTextField()
     let password_text_field_model = PasswordTextField()
     var login_button = RaisedButton()
     let login_button_model = LoginButton()

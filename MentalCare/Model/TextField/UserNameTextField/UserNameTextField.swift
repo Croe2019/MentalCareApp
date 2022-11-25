@@ -17,16 +17,17 @@ class UserNameTextField{
     var position_x = Int()
     var position_y = Int()
     
-    public func CreateUserNameTextField(user_name_text_field: YoshikoTextField){
+    public func CreateUserNameTextField(user_name_text_field: HoshiTextField){
         
         // 名前のテキストフィールドの設定
         position_x = x.PositionSetting(x: 50)
         position_y = y.PositionSetting(y: 180)
-        user_name_text_field.frame = CGRect(x: position_x, y: position_y, width: 250, height: 50)
-        user_name_text_field.placeholder = "名前を入力してください"
+        user_name_text_field.frame = CGRect(x: position_x, y: position_y, width: 300, height: 50)
+        user_name_text_field.placeholder = "UserName"
         user_name_text_field.placeholderFontScale = 0.5
         user_name_text_field.placeholderColor = .darkGray
         user_name_text_field.textColor = .darkGray
-        user_name_text_field.activeBorderColor = .link
+        user_name_text_field.borderActiveColor = .darkGray
+        user_name_text_field.borderInactiveColor = .darkGray
     }
 }
