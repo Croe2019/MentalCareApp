@@ -13,8 +13,8 @@ class LoginLabel{
     public func LoginLabel(login_label: LTMorphingLabel){
         
         login_label.fontSize = 40
-        login_label.frame = CGRect(x: 130, y: -70, width: 300, height: 300)
-        login_label.text = "ログイン"
+        login_label.frame = CGRect(x: 140, y: -70, width: 300, height: 300)
+        login_label.text = "Sign in"
         login_label.morphingEffect = .sparkle
     }
 }
