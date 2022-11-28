@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352F25F52930657800ECC21A /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F25F42930657800ECC21A /* Database.swift */; };
+		352F25F9293078FA00ECC21A /* UsersTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F25F8293078FA00ECC21A /* UsersTable.swift */; };
+		352F25FB29307BD800ECC21A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352F25FA29307BD800ECC21A /* GoogleService-Info.plist */; };
+		352F25FE29307CA900ECC21A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 352F25FD29307CA900ECC21A /* FirebaseFirestore */; };
+		352F260029307CA900ECC21A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 352F25FF29307CA900ECC21A /* FirebaseStorage */; };
+		352F260229307F2900ECC21A /* default_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 352F260129307F2900ECC21A /* default_image.png */; };
+		352F2605293083E400ECC21A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F2604293083E400ECC21A /* HomeViewController.swift */; };
 		359E8E2929304FF60026EA4F /* 森林浴_ログイン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 359E8E2829304FF60026EA4F /* 森林浴_ログイン.jpeg */; };
 		35E16BD9292B0AF700A79F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E16BD8292B0AF700A79F4F /* AppDelegate.swift */; };
 		35E16BDB292B0AF700A79F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E16BDA292B0AF700A79F4F /* SceneDelegate.swift */; };
@@ -31,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		352F25F42930657800ECC21A /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		352F25F8293078FA00ECC21A /* UsersTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTable.swift; sourceTree = "<group>"; };
+		352F25FA29307BD800ECC21A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		352F260129307F2900ECC21A /* default_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_image.png; path = ../../../../../Downloads/default_image.png; sourceTree = "<group>"; };
+		352F2604293083E400ECC21A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		359E8E2829304FF60026EA4F /* 森林浴_ログイン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "森林浴_ログイン.jpeg"; path = "../../../../../Downloads/森林浴_ログイン.jpeg"; sourceTree = "<group>"; };
 		35E16BD5292B0AF700A79F4F /* MentalCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E16BD8292B0AF700A79F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +74,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				35ED80E6292B126000C43B7B /* SQLite in Frameworks */,
+				352F25FE29307CA900ECC21A /* FirebaseFirestore in Frameworks */,
 				791B73C26CCF0E3E56F6C4C4 /* Pods_MentalCare.framework in Frameworks */,
+				352F260029307CA900ECC21A /* FirebaseStorage in Frameworks */,
 				35ED80E3292B123400C43B7B /* ButtonClickStyle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +84,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352F25F32930656600ECC21A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				352F25F6293078DB00ECC21A /* Table */,
+				352F25F42930657800ECC21A /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		352F25F6293078DB00ECC21A /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				352F25F7293078E800ECC21A /* Users */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		352F25F7293078E800ECC21A /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				352F25F8293078FA00ECC21A /* UsersTable.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		352F2603293083D200ECC21A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				352F2604293083E400ECC21A /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		359E8E2629304FD40026EA4F /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +128,7 @@
 		359E8E2729304FE30026EA4F /* LoginImage */ = {
 			isa = PBXGroup;
 			children = (
+				352F260129307F2900ECC21A /* default_image.png */,
 				359E8E2829304FF60026EA4F /* 森林浴_ログイン.jpeg */,
 			);
 			path = LoginImage;
@@ -118,6 +166,7 @@
 				35E16BE1292B0AF800A79F4F /* Assets.xcassets */,
 				35E16BE3292B0AF800A79F4F /* LaunchScreen.storyboard */,
 				35E16BE6292B0AF800A79F4F /* Info.plist */,
+				352F25FA29307BD800ECC21A /* GoogleService-Info.plist */,
 			);
 			path = MentalCare;
 			sourceTree = "<group>";
@@ -125,6 +174,7 @@
 		35E53E53292B1B5C009E5BE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				352F25F32930656600ECC21A /* Database */,
 				35EF2387292F356300E4114D /* Label */,
 				35EF2382292EFF1E00E4114D /* Paramater */,
 				35E74228292C5BBB00DAFAE2 /* Button */,
@@ -143,6 +193,7 @@
 		35E53E55292B1B6B009E5BE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				352F2603293083D200ECC21A /* Home */,
 				35E7422F292C5EE600DAFAE2 /* Register */,
 				35E53E58292B1BD1009E5BE6 /* Login */,
 			);
@@ -296,6 +347,8 @@
 			packageProductDependencies = (
 				35ED80E2292B123400C43B7B /* ButtonClickStyle */,
 				35ED80E5292B126000C43B7B /* SQLite */,
+				352F25FD29307CA900ECC21A /* FirebaseFirestore */,
+				352F25FF29307CA900ECC21A /* FirebaseStorage */,
 			);
 			productName = MentalCare;
 			productReference = 35E16BD5292B0AF700A79F4F /* MentalCare.app */;
@@ -328,6 +381,7 @@
 			packageReferences = (
 				35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */,
 				35ED80E4292B126000C43B7B /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				352F25FC29307CA900ECC21A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 35E16BD6292B0AF700A79F4F /* Products */;
 			projectDirPath = "";
@@ -345,8 +399,10 @@
 			files = (
 				35E16BE5292B0AF800A79F4F /* LaunchScreen.storyboard in Resources */,
 				35E16BE2292B0AF800A79F4F /* Assets.xcassets in Resources */,
+				352F25FB29307BD800ECC21A /* GoogleService-Info.plist in Resources */,
 				359E8E2929304FF60026EA4F /* 森林浴_ログイン.jpeg in Resources */,
 				35E16BE0292B0AF700A79F4F /* Main.storyboard in Resources */,
+				352F260229307F2900ECC21A /* default_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +458,10 @@
 				35E74231292C601300DAFAE2 /* RegisterViewController.swift in Sources */,
 				35E74234292C8BF500DAFAE2 /* UserNameTextField.swift in Sources */,
 				35E7422E292C5C8900DAFAE2 /* RegisterButton.swift in Sources */,
+				352F2605293083E400ECC21A /* HomeViewController.swift in Sources */,
+				352F25F52930657800ECC21A /* Database.swift in Sources */,
 				35E53E57292B1BC2009E5BE6 /* LoginViewController.swift in Sources */,
+				352F25F9293078FA00ECC21A /* UsersTable.swift in Sources */,
 				35E16BDD292B0AF700A79F4F /* ViewController.swift in Sources */,
 				35E7422A292C5BCA00DAFAE2 /* LoginButton.swift in Sources */,
 				35E74227292C5B0B00DAFAE2 /* PasswordTextField.swift in Sources */,
@@ -636,6 +695,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		352F25FC29307CA900ECC21A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mrustaa/ButtonClickStyle";
@@ -655,6 +722,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		352F25FD29307CA900ECC21A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 352F25FC29307CA900ECC21A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		352F25FF29307CA900ECC21A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 352F25FC29307CA900ECC21A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		35ED80E2292B123400C43B7B /* ButtonClickStyle */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */;
