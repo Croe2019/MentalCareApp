@@ -23,6 +23,8 @@ class RegisterViewController: UIViewController {
     let register_button_model = RegisterButton()
     var register_label = LTMorphingLabel()
     let register_label_model = RegisterLabel()
+    var database = Database()
+    var users_table = UsersTable()
     
     var back_button: UIBarButtonItem!
     
@@ -36,11 +38,16 @@ class RegisterViewController: UIViewController {
         register_label_model.RegisterLabel(register_label: register_label)
         
         SetNavigationBar()
+        //database.OpenDB()
+        // 最初に1回だけ処理をよぶ
+        //users_table.CreateUsersTable()
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
         view.addSubview(register_label)
         view.addSubview(user_name_text_field)
         view.addSubview(email_text_field)
         view.addSubview(password_text_field)
         view.addSubview(register_button)
+        register_button.addTarget(self, action: #selector(Register), for: .touchUpInside)
     }
     
     func SetNavigationBar() {
@@ -59,6 +66,8 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func Register(){
-        // ここでDBにユーザー情報を登録後、ホーム画面へ遷移する
+        users_table.insert(name: user_name_text_field.text!, email: email_text_field.text!, password: password_text_field.text!)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
+        self.present(vc, animated: true, completion: nil)
     }
 }

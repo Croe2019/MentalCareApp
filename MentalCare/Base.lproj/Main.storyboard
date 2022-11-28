@@ -25,6 +25,21 @@
             </objects>
             <point key="canvasLocation" x="803.81679389312978" y="1.4084507042253522"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="z9N-da-cOw">
+            <objects>
+                <viewController storyboardIdentifier="home" modalPresentationStyle="fullScreen" id="t4E-PR-75P" customClass="HomeViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r8x-Zw-lCf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vfR-Y8-22a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QME-dh-6TX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="247"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="352-2A-8vC">
             <objects>
