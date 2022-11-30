@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3506006C2936FE3400A8B38E /* Home.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3506006B2936FE3400A8B38E /* Home.jpeg */; };
+		3506006E29371EFB00A8B38E /* EmotionalMemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3506006D29371EFB00A8B38E /* EmotionalMemo.png */; };
+		3506007029371F7200A8B38E /* home_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3506006F29371F7200A8B38E /* home_2.png */; };
+		350600722937206C00A8B38E /* counseling.png in Resources */ = {isa = PBXBuildFile; fileRef = 350600712937206C00A8B38E /* counseling.png */; };
+		350600742937219200A8B38E /* life_rhythm.png in Resources */ = {isa = PBXBuildFile; fileRef = 350600732937219200A8B38E /* life_rhythm.png */; };
+		350600782937233A00A8B38E /* hospital.png in Resources */ = {isa = PBXBuildFile; fileRef = 350600752937233900A8B38E /* hospital.png */; };
+		350600792937233A00A8B38E /* mediation.png in Resources */ = {isa = PBXBuildFile; fileRef = 350600762937233900A8B38E /* mediation.png */; };
+		3506007A2937233A00A8B38E /* medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = 350600772937233A00A8B38E /* medicine.png */; };
+		3506007C2937238000A8B38E /* stress.png in Resources */ = {isa = PBXBuildFile; fileRef = 3506007B2937238000A8B38E /* stress.png */; };
 		352F25F52930657800ECC21A /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F25F42930657800ECC21A /* Database.swift */; };
 		352F25F9293078FA00ECC21A /* UsersTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F25F8293078FA00ECC21A /* UsersTable.swift */; };
 		352F25FB29307BD800ECC21A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352F25FA29307BD800ECC21A /* GoogleService-Info.plist */; };
@@ -14,6 +23,15 @@
 		352F260029307CA900ECC21A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 352F25FF29307CA900ECC21A /* FirebaseStorage */; };
 		352F260229307F2900ECC21A /* default_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 352F260129307F2900ECC21A /* default_image.png */; };
 		352F2605293083E400ECC21A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F2604293083E400ECC21A /* HomeViewController.swift */; };
+		353864942935B9AE0080BEAB /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353864932935B9AE0080BEAB /* MenuBarController.swift */; };
+		35936DE92935A27D001CC3E8 /* CardTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 35936DE82935A27D001CC3E8 /* CardTabBar */; };
+		35936DF22935A3B3001CC3E8 /* EmotionalMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35936DF12935A3B3001CC3E8 /* EmotionalMemoViewController.swift */; };
+		35936DF42935A3C6001CC3E8 /* CounselingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35936DF32935A3C6001CC3E8 /* CounselingViewController.swift */; };
+		35936DF62935A3DA001CC3E8 /* LifeRhythmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35936DF52935A3DA001CC3E8 /* LifeRhythmViewController.swift */; };
+		35936DF82935A3E6001CC3E8 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35936DF72935A3E6001CC3E8 /* MedicineViewController.swift */; };
+		35936DFA2935A3F6001CC3E8 /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35936DF92935A3F6001CC3E8 /* StressViewController.swift */; };
+		35936DFC2935A409001CC3E8 /* HospitalVisitDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35936DFB2935A409001CC3E8 /* HospitalVisitDateViewController.swift */; };
+		35936DFE2935A418001CC3E8 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35936DFD2935A418001CC3E8 /* MeditationViewController.swift */; };
 		359E8E2929304FF60026EA4F /* 森林浴_ログイン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 359E8E2829304FF60026EA4F /* 森林浴_ログイン.jpeg */; };
 		35E16BD9292B0AF700A79F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E16BD8292B0AF700A79F4F /* AppDelegate.swift */; };
 		35E16BDB292B0AF700A79F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E16BDA292B0AF700A79F4F /* SceneDelegate.swift */; };
@@ -38,11 +56,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3506006B2936FE3400A8B38E /* Home.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Home.jpeg; path = ../../../../../Downloads/Home.jpeg; sourceTree = "<group>"; };
+		3506006D29371EFB00A8B38E /* EmotionalMemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EmotionalMemo.png; path = ../../../../../Downloads/EmotionalMemo.png; sourceTree = "<group>"; };
+		3506006F29371F7200A8B38E /* home_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_2.png; path = ../../../../../Downloads/home_2.png; sourceTree = "<group>"; };
+		350600712937206C00A8B38E /* counseling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = counseling.png; path = ../../../../../Downloads/counseling.png; sourceTree = "<group>"; };
+		350600732937219200A8B38E /* life_rhythm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = life_rhythm.png; path = ../../../../../Downloads/life_rhythm.png; sourceTree = "<group>"; };
+		350600752937233900A8B38E /* hospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hospital.png; path = ../../../../../Downloads/hospital.png; sourceTree = "<group>"; };
+		350600762937233900A8B38E /* mediation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mediation.png; path = ../../../../../Downloads/mediation.png; sourceTree = "<group>"; };
+		350600772937233A00A8B38E /* medicine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = medicine.png; path = ../../../../../Downloads/medicine.png; sourceTree = "<group>"; };
+		3506007B2937238000A8B38E /* stress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stress.png; path = ../../../../../Downloads/stress.png; sourceTree = "<group>"; };
 		352F25F42930657800ECC21A /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		352F25F8293078FA00ECC21A /* UsersTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTable.swift; sourceTree = "<group>"; };
 		352F25FA29307BD800ECC21A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		352F260129307F2900ECC21A /* default_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_image.png; path = ../../../../../Downloads/default_image.png; sourceTree = "<group>"; };
 		352F2604293083E400ECC21A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		353864932935B9AE0080BEAB /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		35936DF12935A3B3001CC3E8 /* EmotionalMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalMemoViewController.swift; sourceTree = "<group>"; };
+		35936DF32935A3C6001CC3E8 /* CounselingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingViewController.swift; sourceTree = "<group>"; };
+		35936DF52935A3DA001CC3E8 /* LifeRhythmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeRhythmViewController.swift; sourceTree = "<group>"; };
+		35936DF72935A3E6001CC3E8 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
+		35936DF92935A3F6001CC3E8 /* StressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressViewController.swift; sourceTree = "<group>"; };
+		35936DFB2935A409001CC3E8 /* HospitalVisitDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalVisitDateViewController.swift; sourceTree = "<group>"; };
+		35936DFD2935A418001CC3E8 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		359E8E2829304FF60026EA4F /* 森林浴_ログイン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "森林浴_ログイン.jpeg"; path = "../../../../../Downloads/森林浴_ログイン.jpeg"; sourceTree = "<group>"; };
 		35E16BD5292B0AF700A79F4F /* MentalCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E16BD8292B0AF700A79F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35936DE92935A27D001CC3E8 /* CardTabBar in Frameworks */,
 				35ED80E6292B126000C43B7B /* SQLite in Frameworks */,
 				352F25FE29307CA900ECC21A /* FirebaseFirestore in Frameworks */,
 				791B73C26CCF0E3E56F6C4C4 /* Pods_MentalCare.framework in Frameworks */,
@@ -117,6 +153,70 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		353864922935B9940080BEAB /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				353864932935B9AE0080BEAB /* MenuBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		35936DEA2935A2E3001CC3E8 /* EmotionalMemo */ = {
+			isa = PBXGroup;
+			children = (
+				35936DF12935A3B3001CC3E8 /* EmotionalMemoViewController.swift */,
+			);
+			path = EmotionalMemo;
+			sourceTree = "<group>";
+		};
+		35936DEB2935A2FD001CC3E8 /* Counseling */ = {
+			isa = PBXGroup;
+			children = (
+				35936DF32935A3C6001CC3E8 /* CounselingViewController.swift */,
+			);
+			path = Counseling;
+			sourceTree = "<group>";
+		};
+		35936DEC2935A323001CC3E8 /* LifeRhythm */ = {
+			isa = PBXGroup;
+			children = (
+				35936DF52935A3DA001CC3E8 /* LifeRhythmViewController.swift */,
+			);
+			path = LifeRhythm;
+			sourceTree = "<group>";
+		};
+		35936DED2935A345001CC3E8 /* Medicine */ = {
+			isa = PBXGroup;
+			children = (
+				35936DF72935A3E6001CC3E8 /* MedicineViewController.swift */,
+			);
+			path = Medicine;
+			sourceTree = "<group>";
+		};
+		35936DEE2935A35D001CC3E8 /* Stress */ = {
+			isa = PBXGroup;
+			children = (
+				35936DF92935A3F6001CC3E8 /* StressViewController.swift */,
+			);
+			path = Stress;
+			sourceTree = "<group>";
+		};
+		35936DEF2935A37A001CC3E8 /* HospitalVisitDate */ = {
+			isa = PBXGroup;
+			children = (
+				35936DFB2935A409001CC3E8 /* HospitalVisitDateViewController.swift */,
+			);
+			path = HospitalVisitDate;
+			sourceTree = "<group>";
+		};
+		35936DF02935A391001CC3E8 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				35936DFD2935A418001CC3E8 /* MeditationViewController.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
 		359E8E2629304FD40026EA4F /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +228,16 @@
 		359E8E2729304FE30026EA4F /* LoginImage */ = {
 			isa = PBXGroup;
 			children = (
+				3506006F29371F7200A8B38E /* home_2.png */,
+				3506006D29371EFB00A8B38E /* EmotionalMemo.png */,
 				352F260129307F2900ECC21A /* default_image.png */,
+				3506006B2936FE3400A8B38E /* Home.jpeg */,
+				350600732937219200A8B38E /* life_rhythm.png */,
+				3506007B2937238000A8B38E /* stress.png */,
+				350600752937233900A8B38E /* hospital.png */,
+				350600762937233900A8B38E /* mediation.png */,
+				350600772937233A00A8B38E /* medicine.png */,
+				350600712937206C00A8B38E /* counseling.png */,
 				359E8E2829304FF60026EA4F /* 森林浴_ログイン.jpeg */,
 			);
 			path = LoginImage;
@@ -193,6 +302,14 @@
 		35E53E55292B1B6B009E5BE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				353864922935B9940080BEAB /* TabBarController */,
+				35936DF02935A391001CC3E8 /* Meditation */,
+				35936DEF2935A37A001CC3E8 /* HospitalVisitDate */,
+				35936DEE2935A35D001CC3E8 /* Stress */,
+				35936DED2935A345001CC3E8 /* Medicine */,
+				35936DEC2935A323001CC3E8 /* LifeRhythm */,
+				35936DEB2935A2FD001CC3E8 /* Counseling */,
+				35936DEA2935A2E3001CC3E8 /* EmotionalMemo */,
 				352F2603293083D200ECC21A /* Home */,
 				35E7422F292C5EE600DAFAE2 /* Register */,
 				35E53E58292B1BD1009E5BE6 /* Login */,
@@ -349,6 +466,7 @@
 				35ED80E5292B126000C43B7B /* SQLite */,
 				352F25FD29307CA900ECC21A /* FirebaseFirestore */,
 				352F25FF29307CA900ECC21A /* FirebaseStorage */,
+				35936DE82935A27D001CC3E8 /* CardTabBar */,
 			);
 			productName = MentalCare;
 			productReference = 35E16BD5292B0AF700A79F4F /* MentalCare.app */;
@@ -370,7 +488,7 @@
 				};
 			};
 			buildConfigurationList = 35E16BD0292B0AF700A79F4F /* Build configuration list for PBXProject "MentalCare" */;
-			compatibilityVersion = "Xcode 12.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -382,6 +500,7 @@
 				35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */,
 				35ED80E4292B126000C43B7B /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 				352F25FC29307CA900ECC21A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				35936DE72935A27D001CC3E8 /* XCRemoteSwiftPackageReference "CardTabBar" */,
 			);
 			productRefGroup = 35E16BD6292B0AF700A79F4F /* Products */;
 			projectDirPath = "";
@@ -398,10 +517,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				35E16BE5292B0AF800A79F4F /* LaunchScreen.storyboard in Resources */,
+				350600792937233A00A8B38E /* mediation.png in Resources */,
+				3506007029371F7200A8B38E /* home_2.png in Resources */,
+				3506007A2937233A00A8B38E /* medicine.png in Resources */,
 				35E16BE2292B0AF800A79F4F /* Assets.xcassets in Resources */,
+				350600782937233A00A8B38E /* hospital.png in Resources */,
+				350600742937219200A8B38E /* life_rhythm.png in Resources */,
+				3506006E29371EFB00A8B38E /* EmotionalMemo.png in Resources */,
+				3506007C2937238000A8B38E /* stress.png in Resources */,
 				352F25FB29307BD800ECC21A /* GoogleService-Info.plist in Resources */,
+				3506006C2936FE3400A8B38E /* Home.jpeg in Resources */,
 				359E8E2929304FF60026EA4F /* 森林浴_ログイン.jpeg in Resources */,
 				35E16BE0292B0AF700A79F4F /* Main.storyboard in Resources */,
+				350600722937206C00A8B38E /* counseling.png in Resources */,
 				352F260229307F2900ECC21A /* default_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +586,9 @@
 				35E74231292C601300DAFAE2 /* RegisterViewController.swift in Sources */,
 				35E74234292C8BF500DAFAE2 /* UserNameTextField.swift in Sources */,
 				35E7422E292C5C8900DAFAE2 /* RegisterButton.swift in Sources */,
+				35936DFC2935A409001CC3E8 /* HospitalVisitDateViewController.swift in Sources */,
+				35936DF42935A3C6001CC3E8 /* CounselingViewController.swift in Sources */,
+				35936DF62935A3DA001CC3E8 /* LifeRhythmViewController.swift in Sources */,
 				352F2605293083E400ECC21A /* HomeViewController.swift in Sources */,
 				352F25F52930657800ECC21A /* Database.swift in Sources */,
 				35E53E57292B1BC2009E5BE6 /* LoginViewController.swift in Sources */,
@@ -466,11 +597,16 @@
 				35E7422A292C5BCA00DAFAE2 /* LoginButton.swift in Sources */,
 				35E74227292C5B0B00DAFAE2 /* PasswordTextField.swift in Sources */,
 				35F3B97B292B44B2002042D3 /* EmailTextField.swift in Sources */,
+				353864942935B9AE0080BEAB /* MenuBarController.swift in Sources */,
 				35EF2386292EFF7A00E4114D /* PositionY.swift in Sources */,
 				35E16BD9292B0AF700A79F4F /* AppDelegate.swift in Sources */,
+				35936DF82935A3E6001CC3E8 /* MedicineViewController.swift in Sources */,
+				35936DF22935A3B3001CC3E8 /* EmotionalMemoViewController.swift in Sources */,
 				35E16BDB292B0AF700A79F4F /* SceneDelegate.swift in Sources */,
+				35936DFA2935A3F6001CC3E8 /* StressViewController.swift in Sources */,
 				35EF2384292EFF3D00E4114D /* PositionX.swift in Sources */,
 				35EF238B292F358300E4114D /* LoginLabel.swift in Sources */,
+				35936DFE2935A418001CC3E8 /* MeditationViewController.swift in Sources */,
 				35EF238D292F361100E4114D /* RegisterLable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,7 +683,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -601,7 +737,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -627,7 +763,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,7 +793,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -703,6 +839,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		35936DE72935A27D001CC3E8 /* XCRemoteSwiftPackageReference "CardTabBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yusadogru/CardTabBar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		35ED80E1292B123400C43B7B /* XCRemoteSwiftPackageReference "ButtonClickStyle" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mrustaa/ButtonClickStyle";
@@ -731,6 +875,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 352F25FC29307CA900ECC21A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		35936DE82935A27D001CC3E8 /* CardTabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35936DE72935A27D001CC3E8 /* XCRemoteSwiftPackageReference "CardTabBar" */;
+			productName = CardTabBar;
 		};
 		35ED80E2292B123400C43B7B /* ButtonClickStyle */ = {
 			isa = XCSwiftPackageProductDependency;

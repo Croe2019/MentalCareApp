@@ -7,11 +7,15 @@ PODS:
   - Motion (3.1.3):
     - Motion/Core (= 3.1.3)
   - Motion/Core (3.1.3)
+  - SnapKit (5.6.0)
+  - SOTabBar (1.1.3)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - LTMorphingLabel
   - Material
+  - SnapKit
+  - SOTabBar
   - TextFieldEffects
 
 SPEC REPOS:
@@ -19,14 +23,18 @@ SPEC REPOS:
     - LTMorphingLabel
     - Material
     - Motion
+    - SnapKit
+    - SOTabBar
     - TextFieldEffects
 
 SPEC CHECKSUMS:
   LTMorphingLabel: f2b256e4fe665aac27f0d0e8ccdcd79590f0cd70
   Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SOTabBar: 27aea95bd6b39d1be3535c867a2cd3b5adc172e6
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 4a1ccac45a0485c68aaa8bb68da49af49be83a0a
+PODFILE CHECKSUM: 1ce93a702bfe3b1954245360802309d59ab5a635
 
 COCOAPODS: 1.11.3
