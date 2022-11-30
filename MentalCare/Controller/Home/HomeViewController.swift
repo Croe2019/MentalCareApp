@@ -11,7 +11,7 @@ import SQLite3
 class HomeViewController: UIViewController {
 
     var home_label = UILabel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         home_label.text = "ログイン成功"
@@ -19,4 +19,5 @@ class HomeViewController: UIViewController {
         home_label.fontSize = 40
         view.addSubview(home_label)
     }
+    
 }

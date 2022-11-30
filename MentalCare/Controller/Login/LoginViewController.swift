@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
     fileprivate var db:OpaquePointer?
     fileprivate var login_data: [(email: String, login_password: String)] = []
     fileprivate let db_file: String = "MentalCare.db"
+    
+    fileprivate var test_button = RaisedButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,22 @@ class LoginViewController: UIViewController {
         
         // 新規ユーザー登録をタップしたときの処理
         register_button.addTarget(self, action: #selector(LoginViewController.RegisterButtonTapped(sender:)), for: .touchUpInside)
+        
+        test_button.frame = CGRect(x: 100, y: 500, width: 300, height: 50)
+        test_button.title = "テスト"
+        test_button.titleColor = .white
+        test_button.pulseColor = .white
+        test_button.backgroundColor = Color.blue.base
+        test_button.cornerRadiusPreset = .cornerRadius7
+        view.addSubview(test_button)
+        test_button.addTarget(self, action: #selector(TestLogin), for: .touchUpInside)
+    }
+    
+    // テスト用ボタン
+    @objc func TestLogin(){
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
+        self.present(vc, animated: true, completion: nil)
     }
     
     // ログイン処理を行う
@@ -63,7 +81,7 @@ class LoginViewController: UIViewController {
         login_data.forEach{ value in
             if(email_text_field.text == value.email && password_text_field.text == value.login_password){
                 print("ログインボタンを押しました")
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
                 self.present(vc, animated: true, completion: nil)
             }else{
                 // エラーメッセージを表示する

@@ -25,20 +25,133 @@
             </objects>
             <point key="canvasLocation" x="803.81679389312978" y="1.4084507042253522"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Item-->
         <scene sceneID="z9N-da-cOw">
             <objects>
-                <viewController storyboardIdentifier="home" modalPresentationStyle="fullScreen" id="t4E-PR-75P" customClass="HomeViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" modalPresentationStyle="fullScreen" id="t4E-PR-75P" customClass="HomeViewController" customModule="MentalCare" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r8x-Zw-lCf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vfR-Y8-22a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="pNP-eV-Du7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QME-dh-6TX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="247"/>
+            <point key="canvasLocation" x="2833" y="-510"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="0MY-U6-vwD">
+            <objects>
+                <viewController storyboardIdentifier="emotionalmemo" id="VOD-su-Wm2" customClass="EmotionalMemoViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fkm-pe-Jpz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gWj-uG-gZg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Td2-eL-9OG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFj-dz-xEn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3702" y="-318"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="MLs-vg-mYH">
+            <objects>
+                <viewController storyboardIdentifier="medicine" id="uG3-Og-X3y" customClass="MedicineViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DtY-4F-Vc8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="G6S-g5-906"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1VL-2f-he1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOe-GZ-ugb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4613" y="-337"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="xti-Ul-cIL">
+            <objects>
+                <viewController storyboardIdentifier="meditation" id="wGY-st-tNe" customClass="MeditationViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRi-gu-GgO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZUC-9R-FKa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="4nz-Ow-R3J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cy3-ll-ha3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5531" y="-296"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="R3J-AN-fQv">
+            <objects>
+                <viewController storyboardIdentifier="counseling" id="biG-PR-7zL" customClass="CounselingViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dw5-CY-QuO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="68y-FO-Qxg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="p9e-2e-ena"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4X-5c-rHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2891" y="887"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="rmn-Zj-TYt">
+            <objects>
+                <viewController storyboardIdentifier="stress" id="1Ia-Yj-u4d" customClass="StressViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Prj-bk-jFh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ets-6J-7fi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="65F-oR-vf3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dm5-aU-Sex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4851" y="493"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="fXk-ZE-clz">
+            <objects>
+                <viewController storyboardIdentifier="liferhythm" id="N6R-UO-Lix" customClass="LifeRhythmViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VvO-Ga-x7T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="StF-Av-u6U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2gV-8q-sbk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oga-3d-cPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="1158"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="dXT-iu-SXQ">
+            <objects>
+                <viewController storyboardIdentifier="hospitalvisitdate" id="Lcw-86-pzn" customClass="HospitalVisitDateViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kFm-UL-Rgh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nlg-xc-MLe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="fLk-Gm-Lrw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogH-ar-XtW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3902" y="871"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="352-2A-8vC">
@@ -54,6 +167,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahy-UI-xQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804" y="727"/>
+        </scene>
+        <!--Menu Bar Controller-->
+        <scene sceneID="Mme-VT-kGA">
+            <objects>
+                <tabBarController storyboardIdentifier="menu" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tZO-lz-tAe" customClass="MenuBarController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3nV-SW-aYL" customClass="JBTabBar" customModule="JBTabBarAnimation">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSg-oK-p14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980.916030534351" y="247.88732394366198"/>
         </scene>
     </scenes>
     <resources>
