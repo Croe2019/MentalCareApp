@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Material
+import SnapKit
 
 class LoginButton{
     
@@ -19,6 +20,10 @@ class LoginButton{
         login_button.pulseColor = .white
         login_button.backgroundColor = Color.blue.base
         login_button.cornerRadiusPreset = .cornerRadius7
-        login_button.frame = CGRect(x: 50, y: 300, width: 300, height: 50)
+        login_button.snp.makeConstraints{ (make) in
+            
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+        }
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 import TextFieldEffects
 import Material
 import LTMorphingLabel
+import SnapKit
 
 @available(iOS 13.0, *)
 class RegisterViewController: UIViewController {
@@ -47,7 +48,41 @@ class RegisterViewController: UIViewController {
         view.addSubview(email_text_field)
         view.addSubview(password_text_field)
         view.addSubview(register_button)
+        UISetting()
         register_button.addTarget(self, action: #selector(Register), for: .touchUpInside)
+    }
+    
+    fileprivate func UISetting(){
+        
+        register_label.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(90)
+        }
+        
+        user_name_text_field.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(register_label.snp.top).offset(120)
+        }
+        
+        email_text_field.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(user_name_text_field.snp.top).offset(90)
+        }
+        
+        password_text_field.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(email_text_field.snp.top).offset(90)
+        }
+        
+        register_button.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(password_text_field.snp.top).offset(120)
+        }
     }
     
     func SetNavigationBar() {
@@ -67,7 +102,7 @@ class RegisterViewController: UIViewController {
     
     @objc func Register(){
         users_table.insert(name: user_name_text_field.text!, email: email_text_field.text!, password: password_text_field.text!)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
         self.present(vc, animated: true, completion: nil)
     }
 }

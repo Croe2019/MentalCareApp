@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Material
+import SnapKit
 
 class RegisterButton{
     
@@ -18,6 +19,10 @@ class RegisterButton{
         register_button.pulseColor = .white
         register_button.backgroundColor = Color.blue.base
         register_button.cornerRadiusPreset = .cornerRadius7
-        register_button.frame = CGRect(x: 50, y: 400, width: 300, height: 50)
+        register_button.snp.makeConstraints{ (make) in
+            
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+        }
     }
 }

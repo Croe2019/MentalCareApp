@@ -10,6 +10,7 @@ import TextFieldEffects
 import Material
 import LTMorphingLabel
 import SQLite3
+import SnapKit
 
 @available(iOS 13.0, *)
 class LoginViewController: UIViewController {
@@ -46,21 +47,65 @@ class LoginViewController: UIViewController {
         view.addSubview(password_text_field)
         view.addSubview(login_button)
         view.addSubview(register_button)
+        view.addSubview(test_button)
+        UISetting()
         GetUserData()
         // ログインボタンをタップされた時の処理
-        login_button.addTarget(self, action: #selector(LoginViewController.LoginButtonTapped(sender:)), for: .touchUpInside)
+        login_button.addTarget(self, action: #selector(LoginButtonTapped), for: .touchUpInside)
         
         // 新規ユーザー登録をタップしたときの処理
-        register_button.addTarget(self, action: #selector(LoginViewController.RegisterButtonTapped(sender:)), for: .touchUpInside)
+        register_button.addTarget(self, action: #selector(RegisterButtonTapped), for: .touchUpInside)
         
-        test_button.frame = CGRect(x: 100, y: 500, width: 300, height: 50)
+        // テスト用ログインボタン処理呼び出し
+        test_button.addTarget(self, action: #selector(TestLogin), for: .touchUpInside)
+    }
+    
+    fileprivate func UISetting(){
+        
+        // ログインラベルの位置設定
+        login_label.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(30)
+        }
+        
+        email_text_field.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(login_label.snp.top).offset(100)
+        }
+        
+        password_text_field.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(email_text_field.snp.top).offset(70)
+        }
+        
+        login_button.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(password_text_field.snp.top).offset(100)
+        }
+        
+        register_button.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.top.equalTo(login_button.snp.top).offset(100)
+        }
+        
+        // テスト用ログインボタン
+        test_button.snp.makeConstraints{ (make) in
+            
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+            make.top.equalTo(register_button.snp.top).offset(100)
+        }
         test_button.title = "テスト"
         test_button.titleColor = .white
         test_button.pulseColor = .white
         test_button.backgroundColor = Color.blue.base
         test_button.cornerRadiusPreset = .cornerRadius7
-        view.addSubview(test_button)
-        test_button.addTarget(self, action: #selector(TestLogin), for: .touchUpInside)
     }
     
     // テスト用ボタン
@@ -71,7 +116,7 @@ class LoginViewController: UIViewController {
     }
     
     // ログイン処理を行う
-    @objc func LoginButtonTapped(sender : Any){
+    @objc func LoginButtonTapped(){
         
         if email_text_field.text == "" || password_text_field.text == ""{
             print("メールアドレス、パスワードのいずれかが入力されていません")
@@ -93,7 +138,7 @@ class LoginViewController: UIViewController {
     }
     
     // ユーザー登録画面への遷移
-    @objc func RegisterButtonTapped(sender: Any){
+    @objc func RegisterButtonTapped(){
         // ここに画面遷移処理をかく
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "register") as! RegisterViewController
             self.present(vc, animated: true, completion: nil)

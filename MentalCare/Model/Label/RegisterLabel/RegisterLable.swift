@@ -7,6 +7,7 @@
 
 import Foundation
 import LTMorphingLabel
+import SnapKit
 
 class RegisterLabel{
     
@@ -14,7 +15,7 @@ class RegisterLabel{
     public func RegisterLabel(register_label: LTMorphingLabel){
         
         register_label.fontSize = 40
-        register_label.frame = CGRect(x: 130, y: -30, width: 300, height: 300)
+        //register_label.frame = CGRect(x: 130, y: -30, width: 300, height: 300)
         register_label.text = "Register"
         register_label.morphingEffect = .sparkle
     }
