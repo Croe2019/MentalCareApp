@@ -7,6 +7,7 @@
 
 import UIKit
 import SQLite3
+import SnapKit
 
 class HomeViewController: UIViewController {
 
@@ -15,9 +16,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         home_label.text = "ログイン成功"
-        home_label.frame = CGRect(x: 50, y: 300, width: 300, height: 200)
         home_label.fontSize = 40
         view.addSubview(home_label)
+        
+        home_label.snp.makeConstraints{ (make) in
+            
+            make.center.equalToSuperview()
+        }
     }
     
 }
