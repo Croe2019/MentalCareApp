@@ -8,21 +8,18 @@
 import Foundation
 import UIKit
 import TextFieldEffects
+import SnapKit
 
 @available(iOS 13.0, *)
 class PasswordTextField{
     
-    let x = PositionX()
-    let y = PositionY()
-    var position_x = Int()
-    var position_y = Int()
-    
     public func CreateLoginPasswordTextField(password_text_field: HoshiTextField){
         
         // ここで各画面ごとに位置を設定する
-        position_x = x.PositionSetting(x: 50)
-        position_y = y.PositionSetting(y: 200)
-        password_text_field.frame = CGRect(x: position_x, y: position_y, width: 300, height: 50)
+        password_text_field.snp.makeConstraints{ (make) in
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+        }
         password_text_field.placeholder = "Password"
         password_text_field.placeholderFontScale = 0.5
         password_text_field.placeholderColor = .darkGray
@@ -34,9 +31,11 @@ class PasswordTextField{
     
     public func CreateRegisterPasswordTextField(password_text_field: HoshiTextField){
         
-        position_x = x.PositionSetting(x: 50)
-        position_y = y.PositionSetting(y: 280)
-        password_text_field.frame = CGRect(x: position_x, y: position_y, width: 300, height: 50)
+        
+        password_text_field.snp.makeConstraints{ (make) in
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+        }
         password_text_field.placeholder = "Password"
         password_text_field.placeholderFontScale = 0.5
         password_text_field.placeholderColor = .darkGray
