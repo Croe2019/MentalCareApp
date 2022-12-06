@@ -1,4 +1,7 @@
 PODS:
+  - GRDB.swift (6.5.0):
+    - GRDB.swift/standard (= 6.5.0)
+  - GRDB.swift/standard (6.5.0)
   - LTMorphingLabel (0.9.3)
   - Material (3.1.8):
     - Material/Core (= 3.1.8)
@@ -12,6 +15,7 @@ PODS:
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
+  - GRDB.swift
   - LTMorphingLabel
   - Material
   - SnapKit
@@ -20,6 +24,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - GRDB.swift
     - LTMorphingLabel
     - Material
     - Motion
@@ -28,6 +33,7 @@ SPEC REPOS:
     - TextFieldEffects
 
 SPEC CHECKSUMS:
+  GRDB.swift: 390578b9b9c42ebcc03d2b94da520fb46930d6ea
   LTMorphingLabel: f2b256e4fe665aac27f0d0e8ccdcd79590f0cd70
   Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
@@ -35,6 +41,6 @@ SPEC CHECKSUMS:
   SOTabBar: 27aea95bd6b39d1be3535c867a2cd3b5adc172e6
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 1ce93a702bfe3b1954245360802309d59ab5a635
+PODFILE CHECKSUM: dd50686812b9d6f8da3904c725e9412463ebd199
 
 COCOAPODS: 1.11.3
