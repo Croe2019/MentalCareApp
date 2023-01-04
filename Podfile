@@ -12,4 +12,5 @@ target 'MentalCare' do
  pod 'SnapKit'
  pod 'SOTabBar'
  pod 'RealmSwift'
+ pod 'SwipeCellKit'
 end
