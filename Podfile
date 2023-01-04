@@ -11,5 +11,5 @@ target 'MentalCare' do
  pod 'LTMorphingLabel'
  pod 'SnapKit'
  pod 'SOTabBar'
- pod 'GRDB.swift'
+ pod 'RealmSwift'
 end

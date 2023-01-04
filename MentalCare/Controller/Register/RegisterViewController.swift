@@ -10,6 +10,7 @@ import TextFieldEffects
 import Material
 import LTMorphingLabel
 import SnapKit
+import RealmSwift
 
 @available(iOS 13.0, *)
 class RegisterViewController: UIViewController {
@@ -26,6 +27,7 @@ class RegisterViewController: UIViewController {
     let register_label_model = RegisterLabel()
     var database = Database()
     var users_table = UsersTable()
+    var uuid = String()
     
     var back_button: UIBarButtonItem!
     
@@ -39,6 +41,7 @@ class RegisterViewController: UIViewController {
         register_label_model.RegisterLabel(register_label: register_label)
         
         SetNavigationBar()
+        uuid = UIDevice.current.identifierForVendor!.uuidString
         //database.OpenDB()
         // 最初に1回だけ処理をよぶ
         //users_table.CreateUsersTable()
@@ -101,8 +104,13 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func Register(){
-        users_table.insert(name: user_name_text_field.text!, email: email_text_field.text!, password: password_text_field.text!)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
-        self.present(vc, animated: true, completion: nil)
+        do{
+            
+            users_table.insert(name: user_name_text_field.text!, email: email_text_field.text!, uuid: uuid, password: password_text_field.text!)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
+            self.present(vc, animated: true, completion: nil)
+        }catch{
+            print("登録できませんでした")
+        }
     }
 }
