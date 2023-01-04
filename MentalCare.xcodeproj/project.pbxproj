@@ -52,6 +52,7 @@
 		35EF238B292F358300E4114D /* LoginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF238A292F358300E4114D /* LoginLabel.swift */; };
 		35EF238D292F361100E4114D /* RegisterLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF238C292F361100E4114D /* RegisterLable.swift */; };
 		35F3B97B292B44B2002042D3 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3B97A292B44B2002042D3 /* EmailTextField.swift */; };
+		35F8F56D295573D60080BFD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8F56C295573D60080BFD6 /* User.swift */; };
 		791B73C26CCF0E3E56F6C4C4 /* Pods_MentalCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +88,7 @@
 		35E16BE1292B0AF800A79F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35E16BE4292B0AF800A79F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E16BE6292B0AF800A79F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35E53E56292B1BC2009E5BE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35E53E56292B1BC2009E5BE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		35E74226292C5B0A00DAFAE2 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		35E74229292C5BCA00DAFAE2 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		35E7422D292C5C8900DAFAE2 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		35EF238A292F358300E4114D /* LoginLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLabel.swift; sourceTree = "<group>"; };
 		35EF238C292F361100E4114D /* RegisterLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLable.swift; sourceTree = "<group>"; };
 		35F3B97A292B44B2002042D3 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		35F8F56C295573D60080BFD6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A7AAF6AC937C0297F62B4A61 /* Pods-MentalCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentalCare.debug.xcconfig"; path = "Target Support Files/Pods-MentalCare/Pods-MentalCare.debug.xcconfig"; sourceTree = "<group>"; };
 		CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentalCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFEF7F77F8667B92BD7B97 /* Pods-MentalCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentalCare.release.xcconfig"; path = "Target Support Files/Pods-MentalCare/Pods-MentalCare.release.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		35E53E53292B1B5C009E5BE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35F8F56B295573C10080BFD6 /* Object */,
 				352F25F32930656600ECC21A /* Database */,
 				35EF2387292F356300E4114D /* Label */,
 				35EF2382292EFF1E00E4114D /* Paramater */,
@@ -424,6 +427,14 @@
 				35F3B97A292B44B2002042D3 /* EmailTextField.swift */,
 			);
 			path = EmailTextField;
+			sourceTree = "<group>";
+		};
+		35F8F56B295573C10080BFD6 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				35F8F56C295573D60080BFD6 /* User.swift */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 		AC510565D89B8284210B7F4E /* Frameworks */ = {
@@ -583,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F8F56D295573D60080BFD6 /* User.swift in Sources */,
 				35E74231292C601300DAFAE2 /* RegisterViewController.swift in Sources */,
 				35E74234292C8BF500DAFAE2 /* UserNameTextField.swift in Sources */,
 				35E7422E292C5C8900DAFAE2 /* RegisterButton.swift in Sources */,

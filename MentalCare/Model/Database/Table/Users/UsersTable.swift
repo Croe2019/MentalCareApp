@@ -6,81 +6,59 @@
 //
 
 import Foundation
-import SQLite3
 import UIKit
 import FirebaseStorage
 import FirebaseFirestore
+import RealmSwift
 
 class UsersTable{
     
-    private var db: OpaquePointer?
     private var image_path = String()
-    private let db_file: String = "MentalCare.db"
-    //private var default_user_image: UIImageView!
+    private let realm = try! Realm()
     
-    public func CreateUsersTable(){
-        OpneDB()
-        let create_table = "CREATE TABLE UserData (id integer primary key autoincrement, name string, email string, password string, image_path string)"
         
-        if sqlite3_exec(db, create_table, nil, nil, nil) != SQLITE_OK{
-            print("テーブルの作成に失敗しました")
-        }else{
-            print("テーブルが作成されました")
-        }
-    }
-    
-    private func OpneDB(){
-        
-        let file_url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(self.db_file)
-        
-        if sqlite3_open(file_url.path, &db) != SQLITE_OK{
-            print("DBファイルが見つからず、生成もできません")
-        }else{
-            print("DBファイルが生成できました(対象のパスにDBファイルが存在しました。)")
-        }
-    }
-        
-        func insert(name: String, email: String, password: String){
-            OpneDB()
+    func insert(name: String, email: String, uuid:String ,password: String){
+            
             let default_image = UIImage(named: "default_image")
             let date = NSDate()
             let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
             let storageRef = Storage.storage().reference().child("default_image").child("\(currentTimeStampInSecond).jpg")
             let metaData = StorageMetadata()
             var stmt: OpaquePointer?
-            
+
             metaData.contentType = "default_image/jpg"
             if let uploadData = default_image?.jpegData(compressionQuality: 0.01){
                 storageRef.putData(uploadData, metadata: metaData){(metaData, error) in
                     if error != nil{
-                        
+
                         print("error: \(error?.localizedDescription)")
                     }
-                    storageRef.downloadURL(completion: {(url, error) in
+                    storageRef.downloadURL{ url, error in
                         if error != nil{
                             print("error: \(error?.localizedDescription)")
                         }
                         self.image_path = url!.absoluteString
                         print("url: \(url!.absoluteString)")
+                        let user = User.create(realm: self.realm)
+                        user.individual_identification_number = uuid
+                        user.user_name = name
+                        user.email = email
+                        user.password = password
+                        user.default_image = self.image_path
                         
-                        let query_string = "INSERT INTO UserData (name, email, password ,image_path) VALUES('\(name)', '\(email)', '\(password)', '\(self.image_path)')"
-                        // クリエの準備をする
-                        if sqlite3_prepare(self.db, query_string, -1, &stmt, nil) != SQLITE_OK{
-                            let error_message = String(cString: sqlite3_errmsg(self.db)!)
-                            print("error preparing insert: \(error_message)")
-                            return
+                        let user_data: User = User(value: ["id": user.id,
+                                                           "individual_identification_number": user.individual_identification_number,
+                                                           "user_name": user.user_name,
+                                                           "email": user.email,
+                                                           "password": user.password,
+                                                           "default_image": user.default_image])
+                        try! self.realm.write{
+                            self.realm.add(user_data)
                         }
-                        
-                        // クリエを実行する
-                        if sqlite3_step(stmt) != SQLITE_DONE{
-                            let error_message = String(cString: sqlite3_errmsg(self.db)!)
-                            print("failure inserting hero: \(error_message)")
-                            return
-                        }
-                        
+
                         print("データが登録されました")
-                        
-                    })
+
+                    }
                 }
             }
         }
