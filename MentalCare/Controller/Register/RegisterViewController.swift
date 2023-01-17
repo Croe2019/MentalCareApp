@@ -41,10 +41,10 @@ class RegisterViewController: UIViewController {
         register_label_model.RegisterLabel(register_label: register_label)
         
         SetNavigationBar()
-        uuid = UIDevice.current.identifierForVendor!.uuidString
-        //database.OpenDB()
+        //uuid = UIDevice.current.identifierForVendor!.uuidString
+        database.OpenDB()
         // 最初に1回だけ処理をよぶ
-        //users_table.CreateUsersTable()
+        users_table.CreateUsersTable()
         print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
         view.addSubview(register_label)
         view.addSubview(user_name_text_field)
@@ -106,7 +106,7 @@ class RegisterViewController: UIViewController {
     @objc func Register(){
         do{
             
-            users_table.insert(name: user_name_text_field.text!, email: email_text_field.text!, uuid: uuid, password: password_text_field.text!)
+            users_table.insert(name: user_name_text_field.text!, email: email_text_field.text!, password: password_text_field.text!)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
             self.present(vc, animated: true, completion: nil)
         }catch{

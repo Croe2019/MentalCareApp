@@ -41,6 +41,37 @@
             </objects>
             <point key="canvasLocation" x="2833" y="-510"/>
         </scene>
+        <!--Create Emotioinal Memo View Controller-->
+        <scene sceneID="obP-4K-7i4">
+            <objects>
+                <viewController storyboardIdentifier="create" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KSd-rd-LGi" customClass="CreateEmotioinalMemoViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7EQ-bX-wZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="skL-fS-GdO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3w-Hc-CCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3701.5267175572517" y="-1179.5774647887324"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="IRH-U6-TUI">
+            <objects>
+                <viewController storyboardIdentifier="detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n7W-AP-GO3" customClass="DetailViewController" customModule="MentalCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vaw-bv-EcV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uNm-TF-ZAc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mXH-Jg-3MD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggi-Vy-sWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4587" y="-1187"/>
+        </scene>
         <!--Item-->
         <scene sceneID="0MY-U6-vwD">
             <objects>
@@ -71,6 +102,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Td2-eL-9OG"/>
                     <connections>
                         <outlet property="tableView" destination="pnI-8u-1Wn" id="P2I-KT-fDb"/>
+                        <segue destination="n7W-AP-GO3" kind="presentation" identifier="detail" id="DEM-1G-RDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFj-dz-xEn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

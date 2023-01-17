@@ -10,7 +10,7 @@ import TextFieldEffects
 import Material
 import LTMorphingLabel
 import SnapKit
-import RealmSwift
+import SQLite3
 
 @available(iOS 13.0, *)
 class LoginViewController: UIViewController {
@@ -26,26 +26,15 @@ class LoginViewController: UIViewController {
     fileprivate var login_label = LTMorphingLabel()
     fileprivate let login_label_model = LoginLabel()
     fileprivate var user_table = UsersTable()
-    //fileprivate var login_data: [(email: String, login_password: String)] = []
     
     fileprivate var test_button = RaisedButton()
-    fileprivate let realm = try! Realm()
-    fileprivate var user_data: Results<User>!
+    fileprivate var db:OpaquePointer?
+    fileprivate var login_data: [(email: String, login_password: String)] = []
+    fileprivate let db_file: String = "MentalCare.db"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        user_data = realm.objects(User.self)
-        
-        user_data.forEach { data in
-            
-            print("メールアドレス：\(data.email)")
-            print("ユーザー名：\(data.user_name)")
-            print("パスワード：\(data.password)")
-            print("デフォルト画像：\(data.default_image)")
-        }
-        
-        print(realm.configuration.fileURL!)
         // UIパーツの設定はクラスで管理する
         email_text_field_model.CreateLoginEmailTextField(email_text_field: email_text_field)
         password_text_field_model.CreateLoginPasswordTextField(password_text_field: password_text_field)
@@ -60,6 +49,7 @@ class LoginViewController: UIViewController {
         view.addSubview(register_button)
         view.addSubview(test_button)
         UISetting()
+        GetUserData()
         // ログインボタンをタップされた時の処理
         login_button.addTarget(self, action: #selector(LoginButtonTapped), for: .touchUpInside)
         
@@ -133,15 +123,16 @@ class LoginViewController: UIViewController {
             return
         }
         
-        for i in 0..<user_data.count{
-            do{
-                if user_data[i].email == email_text_field.text && user_data[i].password == password_text_field.text{
-                    
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
-                    self.present(vc, animated: true, completion: nil)
-                }
-            }catch{
-                print("メールアドレス、パスワードのどちらかが違います")
+        login_data.forEach{ value in
+            if(email_text_field.text == value.email && password_text_field.text == value.login_password){
+                print("ログインボタンを押しました")
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
+                self.present(vc, animated: true, completion: nil)
+            }else{
+                // エラーメッセージを表示する
+                print("メールアドレス：\(value.email)")
+                print("パスワード：\(value.login_password)")
+                return
             }
         }
     }
@@ -156,3 +147,39 @@ class LoginViewController: UIViewController {
     
 }
 
+
+@available(iOS 13.0, *)
+// ログインの処理はこのファイルだけで行う 後でクラス化する
+extension LoginViewController{
+    private func OpenDB(){
+        let file_url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(self.db_file)
+        if sqlite3_open(file_url.path, &db) != SQLITE_OK{
+            print("DBファイルが見つからず、生成もできません")
+        }else{
+            print("DBファイルが生成できました（対象のパスにDBファイルが存在しました）")
+            print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+        }
+    }
+    
+    // ここから再開
+    public func GetUserData(){
+        // DBにのファイルを開く
+        OpenDB()
+        let sql = "select * from UserData"
+        var stmt:OpaquePointer?
+        
+        // クリエを準備
+        if sqlite3_prepare(db, sql, -1, &stmt, nil) != SQLITE_OK{
+            let error_message = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(error_message)")
+            return
+        }
+        
+        // クリエを実行し、取得したレコードをループする
+        while(sqlite3_step(stmt) == SQLITE_ROW){
+            let email = String(cString: sqlite3_column_text(stmt, 2))
+            let password = String(cString: sqlite3_column_text(stmt, 3))
+            login_data.append((email, password))
+        }
+    }
+}
