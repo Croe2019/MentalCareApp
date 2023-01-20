@@ -12,8 +12,6 @@ import RealmSwift
 
 class HomeViewController: UIViewController {
 
-    fileprivate let realm = try! Realm()
-    fileprivate var user_data: Results<User>!
     fileprivate var uuid = String()
     fileprivate var login_user_label = UILabel()
     fileprivate var email_label = UILabel()
@@ -22,26 +20,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        user_data = realm.objects(User.self)
-        uuid = UIDevice.current.identifierForVendor!.uuidString
-        
-        // ログインしているユーザーをチェック
-        // チェック完了後ログインしているユーザー名を表示する
-        user_data.forEach { data in
-            if data.individual_identification_number == uuid{
-                
-                // ユーザー名
-                login_user_label.text = data.user_name
-                // メールアドレス
-                email_label.text = data.email
-                // プロフィール画像
-                image_path = data.default_image
-                let url = URL(string: image_path)
-                let data = try! Data(contentsOf: url!)
-                image_view.image = UIImage(data: data)
-            }
-        }
         
         view.addSubview(login_user_label)
         view.addSubview(image_view)

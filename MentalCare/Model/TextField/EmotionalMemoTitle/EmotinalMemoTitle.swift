@@ -18,7 +18,7 @@ class EmotionalMemoTitleTextField{
             make.height.equalTo(50)
             make.width.equalTo(300)
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(100)
+            make.centerY.equalTo(150)
         }
         
         emotional_memo_title_text_field.placeholder = "タイトル"
