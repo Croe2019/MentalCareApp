@@ -37,6 +37,22 @@ class CreateEmotioinalMemoViewController: UIViewController {
         emotional_memo_save_button.CreateEmotionalMemoSaveButton(emotional_save_button: save_button)
         
         save_button.addTarget(self, action: #selector(Save), for: .touchUpInside)
+        SetNavigationBar()
+    }
+    
+    func SetNavigationBar() {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 40, width: screenSize.width, height: 44))
+        let navItem = UINavigationItem(title: "")
+        let doneItem = UIBarButtonItem(title: "戻る", style: .done, target: nil, action: #selector(Back))
+        navItem.leftBarButtonItem = doneItem
+        navBar.setItems([navItem], animated: false)
+        self.view.addSubview(navBar)
+    }
+    
+    // 一覧に戻る
+    @objc func Back(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
