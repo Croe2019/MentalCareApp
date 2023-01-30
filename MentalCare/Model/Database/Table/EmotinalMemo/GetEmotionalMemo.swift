@@ -26,7 +26,7 @@ class GetEmotionalMemo{
     }
     
     // 後で呼び出す箇所で取得するテーブルを引数で渡せるようにする
-    public func GetEmotionalMemoData(table: String, delete_id_data: inout [Int], edit_id_data: inout [Int], memo_title_data: inout [String], memo_body_data: inout [String]){
+    public func GetEmotionalMemoData(table: String, delete_id_data: inout [Int], edit_id_data: inout [Int], memo_title_data: inout [String], memo_body_data: inout [String], emotional_factor_data: inout [Int]){
         // DBにのファイルを開く
         OpenDB()
         let sql = "select * from '\(table)' order by id asc"
@@ -46,11 +46,14 @@ class GetEmotionalMemo{
             let edit_id = Int(sqlite3_column_int(stmt, 0))
             let title = String(cString: sqlite3_column_text(stmt, 1))
             let memo_body = String(cString: sqlite3_column_text(stmt, 2))
+            let emotional_factor = Int(sqlite3_column_int(stmt, 3))
             
             delete_id_data.append(delete_id)
             edit_id_data.append(edit_id)
             memo_title_data.append(title)
             memo_body_data.append(memo_body)
+            emotional_factor_data.append(emotional_factor)
+            
         }
     }
 }

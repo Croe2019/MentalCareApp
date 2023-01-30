@@ -1,10 +1,9 @@
 ${PODS_ROOT}/Target Support Files/Pods-MentalCare/Pods-MentalCare-frameworks.sh
-${BUILT_PRODUCTS_DIR}/DSTextView/DSTextView.framework
 ${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework
 ${BUILT_PRODUCTS_DIR}/Material/Material.framework
 ${BUILT_PRODUCTS_DIR}/Motion/Motion.framework
-${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
-${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/RKPieChart/RKPieChart.framework
+${BUILT_PRODUCTS_DIR}/RKSlider/RKSlider.framework
 ${BUILT_PRODUCTS_DIR}/SOTabBar/SOTabBar.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework

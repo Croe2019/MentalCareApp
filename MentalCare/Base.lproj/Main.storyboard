@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggi-Vy-sWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4587" y="-1187"/>
+            <point key="canvasLocation" x="4583.9694656488546" y="-1187.323943661972"/>
         </scene>
         <!--Emotional Memo Edit View Controller-->
         <scene sceneID="6bi-y7-hAA">

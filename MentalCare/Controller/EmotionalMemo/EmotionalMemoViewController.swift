@@ -31,12 +31,14 @@ class EmotionalMemoViewController: UIViewController, UITableViewDelegate, UITabl
     fileprivate var delete_id_data: [Int] = []
     fileprivate var memo_title_data = [String]()
     fileprivate var memo_body_data = [String]()
+    fileprivate var emotional_factor_data = [Int]()
     
     // 値を渡すための変数
     fileprivate var edit_id_data: [Int] = []
     fileprivate var edit_memo_id = Int()
     fileprivate var title_string = String()
     fileprivate var memo_body_string = String()
+    fileprivate var emotional_factor = Int()
     fileprivate var after_processing_id = [Int]()
     fileprivate var get_emotional_memo = GetEmotionalMemo()
     
@@ -45,7 +47,7 @@ class EmotionalMemoViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         
         // データ一覧を取得
-        get_emotional_memo.GetEmotionalMemoData(table: "EmotionalMemo", delete_id_data: &delete_id_data, edit_id_data: &edit_id_data, memo_title_data: &memo_title_data, memo_body_data: &memo_body_data)
+        get_emotional_memo.GetEmotionalMemoData(table: "EmotionalMemo", delete_id_data: &delete_id_data, edit_id_data: &edit_id_data, memo_title_data: &memo_title_data, memo_body_data: &memo_body_data, emotional_factor_data: &emotional_factor_data)
         tableView.frame = CGRect(x:screenWidth * 0/100, y:screenHeight * 10/100, width:screenWidth * 100/100, height:screenHeight * 80/100)
         //cellの高さを指定
         self.tableView.rowHeight = 100
@@ -68,6 +70,7 @@ class EmotionalMemoViewController: UIViewController, UITableViewDelegate, UITabl
             detail_vc.delete_id = delete_id
             detail_vc.title_string = title_string
             detail_vc.memo_body_string = memo_body_string
+            detail_vc.emotional_factor = emotional_factor
         }
     }
     
@@ -78,6 +81,7 @@ class EmotionalMemoViewController: UIViewController, UITableViewDelegate, UITabl
         edit_memo_id = edit_id_data[indexPath.row]
         title_string = memo_title_data[indexPath.row]
         memo_body_string = memo_body_data[indexPath.row]
+        emotional_factor = emotional_factor_data[indexPath.row]
         performSegue(withIdentifier: "detail", sender: nil)
     }
     

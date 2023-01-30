@@ -8,7 +8,6 @@
 import UIKit
 import SQLite3
 import SnapKit
-import RealmSwift
 
 class HomeViewController: UIViewController {
 

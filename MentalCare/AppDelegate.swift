@@ -7,7 +7,6 @@
 
 import UIKit
 import FirebaseCore
-import RealmSwift
 
 @available(iOS 13.0, *)
 @main
