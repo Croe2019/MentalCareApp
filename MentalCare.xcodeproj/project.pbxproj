@@ -30,6 +30,7 @@
 		353864942935B9AE0080BEAB /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353864932935B9AE0080BEAB /* MenuBarController.swift */; };
 		353C630929763FEB00C5227A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C630829763FEB00C5227A /* DetailViewController.swift */; };
 		353C630D2976689600C5227A /* EmotionalMemoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C630C2976689600C5227A /* EmotionalMemoEditViewController.swift */; };
+		355AEDE02987808B0039AB6C /* EmotinalPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AEDDF2987808B0039AB6C /* EmotinalPieChart.swift */; };
 		35610BD92978E69C0002EBE4 /* EditSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35610BD82978E69C0002EBE4 /* EditSaveButton.swift */; };
 		35610BDC2978E8650002EBE4 /* EmotionalMemoEditTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35610BDB2978E8650002EBE4 /* EmotionalMemoEditTextField.swift */; };
 		35610BDF2978E9BD0002EBE4 /* EmotionalMemoEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35610BDE2978E9BD0002EBE4 /* EmotionalMemoEditTextView.swift */; };
@@ -58,6 +59,7 @@
 		35E16BE0292B0AF700A79F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E16BDE292B0AF700A79F4F /* Main.storyboard */; };
 		35E16BE2292B0AF800A79F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E16BE1292B0AF800A79F4F /* Assets.xcassets */; };
 		35E16BE5292B0AF800A79F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E16BE3292B0AF800A79F4F /* LaunchScreen.storyboard */; };
+		35E3FEB02982333500C76C64 /* EmotionalParamaterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3FEAF2982333500C76C64 /* EmotionalParamaterSlider.swift */; };
 		35E53E57292B1BC2009E5BE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E53E56292B1BC2009E5BE6 /* LoginViewController.swift */; };
 		35E74227292C5B0B00DAFAE2 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E74226292C5B0A00DAFAE2 /* PasswordTextField.swift */; };
 		35E7422A292C5BCA00DAFAE2 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E74229292C5BCA00DAFAE2 /* LoginButton.swift */; };
@@ -97,6 +99,7 @@
 		353864932935B9AE0080BEAB /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		353C630829763FEB00C5227A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		353C630C2976689600C5227A /* EmotionalMemoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalMemoEditViewController.swift; sourceTree = "<group>"; };
+		355AEDDF2987808B0039AB6C /* EmotinalPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotinalPieChart.swift; sourceTree = "<group>"; };
 		35610BD82978E69C0002EBE4 /* EditSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSaveButton.swift; sourceTree = "<group>"; };
 		35610BDB2978E8650002EBE4 /* EmotionalMemoEditTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalMemoEditTextField.swift; sourceTree = "<group>"; };
 		35610BDE2978E9BD0002EBE4 /* EmotionalMemoEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalMemoEditTextView.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		35E16BE1292B0AF800A79F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35E16BE4292B0AF800A79F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E16BE6292B0AF800A79F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E3FEAF2982333500C76C64 /* EmotionalParamaterSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalParamaterSlider.swift; sourceTree = "<group>"; };
 		35E53E56292B1BC2009E5BE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		35E74226292C5B0A00DAFAE2 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		35E74229292C5BCA00DAFAE2 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
@@ -276,6 +280,14 @@
 				353C630C2976689600C5227A /* EmotionalMemoEditViewController.swift */,
 			);
 			path = EmotionalMemoEdit;
+			sourceTree = "<group>";
+		};
+		355AEDDE298780630039AB6C /* EmotionalParamaterPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				355AEDDF2987808B0039AB6C /* EmotinalPieChart.swift */,
+			);
+			path = EmotionalParamaterPieChart;
 			sourceTree = "<group>";
 		};
 		35610BD72978E6860002EBE4 /* EditSaveButton */ = {
@@ -463,9 +475,19 @@
 			path = MentalCare;
 			sourceTree = "<group>";
 		};
+		35E3FEAE2982331000C76C64 /* EmotionalParamaterSlider */ = {
+			isa = PBXGroup;
+			children = (
+				35E3FEAF2982333500C76C64 /* EmotionalParamaterSlider.swift */,
+			);
+			path = EmotionalParamaterSlider;
+			sourceTree = "<group>";
+		};
 		35E53E53292B1B5C009E5BE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				355AEDDE298780630039AB6C /* EmotionalParamaterPieChart */,
+				35E3FEAE2982331000C76C64 /* EmotionalParamaterSlider */,
 				350FC686297114340023F97B /* UITextView */,
 				35F8F56B295573C10080BFD6 /* Object */,
 				352F25F32930656600ECC21A /* Database */,
@@ -830,6 +852,8 @@
 				35610BDC2978E8650002EBE4 /* EmotionalMemoEditTextField.swift in Sources */,
 				35AC8109297A519900E0FE16 /* EmotionalMemoDeleteButton.swift in Sources */,
 				35EF238B292F358300E4114D /* LoginLabel.swift in Sources */,
+				355AEDE02987808B0039AB6C /* EmotinalPieChart.swift in Sources */,
+				35E3FEB02982333500C76C64 /* EmotionalParamaterSlider.swift in Sources */,
 				35936DFE2935A418001CC3E8 /* MeditationViewController.swift in Sources */,
 				35EF238D292F361100E4114D /* RegisterLable.swift in Sources */,
 			);

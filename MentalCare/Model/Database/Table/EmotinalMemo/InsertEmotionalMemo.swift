@@ -15,7 +15,7 @@ class InsertEmotionalMemo{
     
     private func CreateEmotionalMemoTable(){
         
-        let create_table = "CREATE TABLE EmotionalMemo (id integer primary key autoincrement, title string, memo_body string)"
+        let create_table = "CREATE TABLE EmotionalMemo (id integer primary key autoincrement, title string, memo_body string, emotional_factor integer)"
         
         if sqlite3_exec(db, create_table, nil, nil, nil) != SQLITE_OK{
             print("テーブルの作成に失敗しました")
@@ -35,13 +35,13 @@ class InsertEmotionalMemo{
         }
     }
     
-    public func Insert(title: String, memo_body: String){
+    public func Insert(title: String, memo_body: String, emotional_factor: Int){
         
         OpenDB()
         CreateEmotionalMemoTable()
         var stmt: OpaquePointer?
         
-        let query_string = "INSERT INTO EmotionalMemo (title, memo_body) VALUES('\(title)', '\(memo_body)')"
+        let query_string = "INSERT INTO EmotionalMemo (title, memo_body, emotional_factor) VALUES('\(title)', '\(memo_body)', '\(emotional_factor)')"
         // クリエの準備をする
         if sqlite3_prepare(self.db, query_string, -1, &stmt, nil) != SQLITE_OK{
             let error_message = String(cString: sqlite3_errmsg(self.db)!)

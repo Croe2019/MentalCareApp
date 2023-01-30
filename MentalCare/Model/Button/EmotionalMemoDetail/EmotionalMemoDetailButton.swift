@@ -19,7 +19,7 @@ class EmotionalMemoDetailButton{
             make.height.equalTo(50)
             make.width.equalTo(300)
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(600)
+            make.centerY.equalTo(650)
         }
         
         edit_button.setTitle("編集", for: .normal)

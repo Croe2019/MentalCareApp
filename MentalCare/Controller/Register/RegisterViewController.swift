@@ -10,7 +10,6 @@ import TextFieldEffects
 import Material
 import LTMorphingLabel
 import SnapKit
-import RealmSwift
 
 @available(iOS 13.0, *)
 class RegisterViewController: UIViewController {

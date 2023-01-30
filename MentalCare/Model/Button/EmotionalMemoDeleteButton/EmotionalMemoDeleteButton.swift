@@ -19,7 +19,7 @@ class EmotionalMemoDeleteButton{
             make.height.equalTo(50)
             make.width.equalTo(300)
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(700)
+            make.centerY.equalTo(750)
         }
         
         edit_save_button.setTitle("削除", for: .normal)

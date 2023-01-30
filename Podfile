@@ -11,7 +11,8 @@ target 'MentalCare' do
  pod 'LTMorphingLabel'
  pod 'SnapKit'
  pod 'SOTabBar'
- pod 'RealmSwift'
  pod 'SwipeCellKit'
- pod 'DSTextView'
+ pod 'RKSlider'
+ pod "RKPieChart"
+ 
 end
