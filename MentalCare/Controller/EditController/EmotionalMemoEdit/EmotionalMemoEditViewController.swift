@@ -7,6 +7,7 @@
 
 import UIKit
 import SQLite3
+import RKSlider
 
 @available(iOS 15.0, *)
 class EmotionalMemoEditViewController: UIViewController {
@@ -18,6 +19,12 @@ class EmotionalMemoEditViewController: UIViewController {
     fileprivate var save_button = UIButton()
     fileprivate var edit_save_button = EditSaveButton()
     
+    // 感情の数値を増減するスライダー
+    fileprivate var emotional_paramater = Slider()
+    fileprivate var emotional_paramater_slider = EmotionalParamaterSlider()
+    fileprivate var emotional_factor = Int()
+    
+    fileprivate var update_emotional_memo = UpDateEmotionalMemo()
     // 現段階ではfileprivateはつけない 後で値を渡すクラスを作成すること(リファクタリング)
     fileprivate let db_file: String = "MentalCare.db"
     fileprivate var db:OpaquePointer?
@@ -34,12 +41,15 @@ class EmotionalMemoEditViewController: UIViewController {
         
         view.addSubview(title_field)
         view.addSubview(memo_body_view)
+        view.addSubview(emotional_paramater)
         view.addSubview(save_button)
         edit_text_field.CreateEmotionalMemoEditTextField(emotional_memo_edit_text_field: title_field, edit_text: title_field.text!)
         edit_save_button.CreateEdtiSaveButton(edit_save_button: save_button)
         edit_memo_body_view.CreateEmotionalMemoEditView(memo_body_view: memo_body_view, edit_memo_body: memo_body_view.text)
+        emotional_paramater_slider.EmotionalParamaterSliderSet(slider: emotional_paramater)
         
         SetNavigationBar()
+        emotional_paramater.addTarget(self, action: #selector(SliderDidChangeValue), for: .valueChanged)
         save_button.addTarget(self, action: #selector(Save), for: .touchUpInside)
     }
     
@@ -54,9 +64,14 @@ class EmotionalMemoEditViewController: UIViewController {
         self.view.addSubview(navBar)
     }
     
+    @objc func SliderDidChangeValue(_ sender: Slider){
+        self.emotional_factor = Int(sender.value)
+        print(emotional_factor)
+    }
+    
     @objc func Save(){
         
-        Update(edit_id: edit_id, title: title_field.text!, memo_body: memo_body_view.text)
+        update_emotional_memo.Update(edit_id: edit_id, title: title_field.text!, memo_body: memo_body_view.text, emotional_factor: emotional_factor)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! MenuBarController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
@@ -68,53 +83,4 @@ class EmotionalMemoEditViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-}
-
-@available(iOS 15.0, *)
-extension EmotionalMemoEditViewController{
-    
-    private func OpenDB(){
-        let file_url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(self.db_file)
-        if sqlite3_open(file_url.path, &db) != SQLITE_OK{
-            print("DBファイルが見つからず、生成もできません")
-        }else{
-            print("DBファイルが生成できました（対象のパスにDBファイルが存在しました）")
-            print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
-        }
-    }
-    
-    // 後でクラス化する リファクタリング対象
-    public func Update(edit_id: Int, title: String, memo_body: String) -> Bool{
-        
-        OpenDB()
-        let update_sql = """
-        UPDATE EmotionalMemo SET
-        title = '\(title)',
-        memo_body = '\(memo_body)'
-        WHERE id = '\(edit_id)'
-        """
-        
-        var update_stmt: OpaquePointer? = nil
-        
-        if sqlite3_prepare_v2(db, (update_sql as NSString).utf8String, -1, &update_stmt, nil) != SQLITE_OK {
-                print("db error1: \(db)")
-                return false
-            }
-            
-            sqlite3_bind_text(update_stmt, 1, (title as NSString).utf8String, -1, nil)
-            sqlite3_bind_text(update_stmt, 2, (memo_body as NSString).utf8String, -1, nil)
-            
-            
-            sqlite3_bind_int(update_stmt, 0, Int32(edit_id))
-            
-            if sqlite3_step(update_stmt) != SQLITE_DONE {
-                
-                print("error2: \(db)")
-                sqlite3_finalize(update_stmt)
-                return false
-            }
-            sqlite3_finalize(update_stmt)
-        
-        return true
-    }
 }
