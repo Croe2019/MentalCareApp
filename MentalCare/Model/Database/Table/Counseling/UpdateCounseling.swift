@@ -1,14 +1,14 @@
 //
-//  UpDateEmotionalMemo.swift
+//  UpdateCounseling.swift
 //  MentalCare
 //
-//  Created by 濱田広毅 on 2023/01/30.
+//  Created by 濱田広毅 on 2023/02/02.
 //
 
 import Foundation
 import SQLite3
 
-class UpDateEmotionalMemo{
+class UpdateCounseling{
     
     fileprivate let db_file: String = "MentalCare.db"
     fileprivate var db:OpaquePointer?
@@ -23,14 +23,14 @@ class UpDateEmotionalMemo{
     }
 
     // 後でクラス化する リファクタリング対象
-    public func Update(edit_id: Int, title: String, memo_body: String, emotional_factor: Int) -> Bool{
+    public func Update(edit_id: Int, counseling_body: String, complete_or_incomplete: String , counseling_paramater: Int) -> Bool{
         
         OpenDB()
         let update_sql = """
-        UPDATE EmotionalMemo SET
-        title = '\(title)',
-        memo_body = '\(memo_body)',
-        emotional_factor = '\(emotional_factor)'
+        UPDATE Counseling SET
+        counseling_body = '\(counseling_body)',
+        counseling_paramater = '\(counseling_paramater)',
+        complete_or_incomplete = '\(complete_or_incomplete)'
         WHERE id = '\(edit_id)'
         """
     
@@ -41,9 +41,9 @@ class UpDateEmotionalMemo{
                 return false
             }
             
-            sqlite3_bind_text(update_stmt, 1, (title as NSString).utf8String, -1, nil)
-            sqlite3_bind_text(update_stmt, 2, (memo_body as NSString).utf8String, -1, nil)
-            sqlite3_bind_text(update_stmt, 3, (memo_body as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(update_stmt, 1, (counseling_body as NSString).utf8String, -1, nil)
+            sqlite3_bind_int(update_stmt, 2, -1)
+            sqlite3_bind_text(update_stmt, 3, (complete_or_incomplete as NSString).utf8String, -1, nil)
             
             
             sqlite3_bind_int(update_stmt, 0, Int32(edit_id))

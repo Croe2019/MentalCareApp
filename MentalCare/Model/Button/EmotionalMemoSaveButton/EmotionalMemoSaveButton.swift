@@ -26,3 +26,4 @@ class EmotionalMemoSaveButton{
         emotional_save_button.backgroundColor = .tintColor
     }
 }
+
