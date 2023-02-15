@@ -43,12 +43,15 @@ class DetailViewController: UIViewController {
         view.addSubview(memo_body_view)
         view.addSubview(edit_scene_move_button)
         view.addSubview(delete_button)
+        
         detail_label.EmotionalMemoDetailLabel(detail_label: title_label, detail_text: title_label.text!)
         detail_text_view.CreateEmotionalMemoDetailView(memo_body_view: memo_body_view, detail_memo_body: memo_body_view.text)
         detail_button.CreateEmotionalMemoDetailButton(edit_button: edit_scene_move_button)
         emotional_memo_delete_button_setting.CreateDeleteButton(edit_save_button: delete_button)
+        
         memo_body_view.isEditable = false
         memo_body_view.isSelectable = false
+        
         SetNavigationBar()
         CreateModels()
         edit_scene_move_button.addTarget(self, action: #selector(Edit), for: .touchUpInside)

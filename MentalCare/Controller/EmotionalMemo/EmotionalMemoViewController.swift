@@ -15,7 +15,6 @@ class EmotionalMemoViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     // 作成したメモのタイトルを入れて表示する
-    //fileprivate var memo_data = [String]()
     
     //スクリーンの横幅、縦幅を定義
     fileprivate let screenWidth = Int(UIScreen.main.bounds.size.width)
@@ -101,7 +100,7 @@ class EmotionalMemoViewController: UIViewController, UITableViewDelegate, UITabl
         return cell
     }
 
-    //スワイプ時の表示形式の設定。SwipeCellKitの公式サイトを見ると一発でわかる。
+    //スワイプ時の表示形式の設定
     func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
         var options = SwipeOptions()
         options.expansionStyle = .destructive
