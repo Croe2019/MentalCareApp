@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -90,6 +90,10 @@
 		35EF238B292F358300E4114D /* LoginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF238A292F358300E4114D /* LoginLabel.swift */; };
 		35EF238D292F361100E4114D /* RegisterLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF238C292F361100E4114D /* RegisterLable.swift */; };
 		35F3B97B292B44B2002042D3 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3B97A292B44B2002042D3 /* EmailTextField.swift */; };
+		35F3F1EB29B037AE00CFD317 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3F1EA29B037AE00CFD317 /* Alarm.swift */; };
+		35F3F1ED29B0381900CFD317 /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3F1EC29B0381900CFD317 /* CurrentTime.swift */; };
+		35F3F1F229B043CC00CFD317 /* Cuckoo_Clock01-12(Far-Long).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 35F3F1F129B043CC00CFD317 /* Cuckoo_Clock01-12(Far-Long).mp3 */; };
+		35F3F1F429B045DC00CFD317 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F3F1F329B045DB00CFD317 /* AVFoundation.framework */; };
 		35F8F56D295573D60080BFD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8F56C295573D60080BFD6 /* User.swift */; };
 		791B73C26CCF0E3E56F6C4C4 /* Pods_MentalCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */; };
 /* End PBXBuildFile section */
@@ -175,6 +179,10 @@
 		35EF238A292F358300E4114D /* LoginLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLabel.swift; sourceTree = "<group>"; };
 		35EF238C292F361100E4114D /* RegisterLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLable.swift; sourceTree = "<group>"; };
 		35F3B97A292B44B2002042D3 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		35F3F1EA29B037AE00CFD317 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		35F3F1EC29B0381900CFD317 /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
+		35F3F1F129B043CC00CFD317 /* Cuckoo_Clock01-12(Far-Long).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cuckoo_Clock01-12(Far-Long).mp3"; sourceTree = "<group>"; };
+		35F3F1F329B045DB00CFD317 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		35F8F56C295573D60080BFD6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A7AAF6AC937C0297F62B4A61 /* Pods-MentalCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentalCare.debug.xcconfig"; path = "Target Support Files/Pods-MentalCare/Pods-MentalCare.debug.xcconfig"; sourceTree = "<group>"; };
 		CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentalCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +199,7 @@
 				352F25FE29307CA900ECC21A /* FirebaseFirestore in Frameworks */,
 				791B73C26CCF0E3E56F6C4C4 /* Pods_MentalCare.framework in Frameworks */,
 				352F260029307CA900ECC21A /* FirebaseStorage in Frameworks */,
+				35F3F1F429B045DC00CFD317 /* AVFoundation.framework in Frameworks */,
 				35ED80E3292B123400C43B7B /* ButtonClickStyle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +623,7 @@
 		35E16BD7292B0AF700A79F4F /* MentalCare */ = {
 			isa = PBXGroup;
 			children = (
+				35F3F1EE29B03E3A00CFD317 /* SoundData */,
 				359E8E2629304FD40026EA4F /* Image */,
 				35E53E53292B1B5C009E5BE6 /* Model */,
 				35E53E54292B1B63009E5BE6 /* View */,
@@ -642,6 +652,7 @@
 		35E53E53292B1B5C009E5BE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35F3F1E929B0379F00CFD317 /* Alarm */,
 				3552B5C6298B752A004C7217 /* CounselingPieChart */,
 				3570FAD1298A04BD0086522A /* RadioButton */,
 				3570FACE298A00F20086522A /* CounselingParamaterSlider */,
@@ -806,6 +817,23 @@
 			path = EmailTextField;
 			sourceTree = "<group>";
 		};
+		35F3F1E929B0379F00CFD317 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				35F3F1EA29B037AE00CFD317 /* Alarm.swift */,
+				35F3F1EC29B0381900CFD317 /* CurrentTime.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		35F3F1EE29B03E3A00CFD317 /* SoundData */ = {
+			isa = PBXGroup;
+			children = (
+				35F3F1F129B043CC00CFD317 /* Cuckoo_Clock01-12(Far-Long).mp3 */,
+			);
+			path = SoundData;
+			sourceTree = "<group>";
+		};
 		35F8F56B295573C10080BFD6 /* Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +846,7 @@
 		AC510565D89B8284210B7F4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35F3F1F329B045DB00CFD317 /* AVFoundation.framework */,
 				CB6FCCB1222C5E60F071A499 /* Pods_MentalCare.framework */,
 			);
 			name = Frameworks;
@@ -877,7 +906,7 @@
 				};
 			};
 			buildConfigurationList = 35E16BD0292B0AF700A79F4F /* Build configuration list for PBXProject "MentalCare" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -909,6 +938,7 @@
 				350600792937233A00A8B38E /* mediation.png in Resources */,
 				3506007029371F7200A8B38E /* home_2.png in Resources */,
 				3506007A2937233A00A8B38E /* medicine.png in Resources */,
+				35F3F1F229B043CC00CFD317 /* Cuckoo_Clock01-12(Far-Long).mp3 in Resources */,
 				35E16BE2292B0AF800A79F4F /* Assets.xcassets in Resources */,
 				350600782937233A00A8B38E /* hospital.png in Resources */,
 				350600742937219200A8B38E /* life_rhythm.png in Resources */,
@@ -990,6 +1020,7 @@
 				352F2605293083E400ECC21A /* HomeViewController.swift in Sources */,
 				352F25F52930657800ECC21A /* Database.swift in Sources */,
 				3552B5CA298B8459004C7217 /* UpdateCounseling.swift in Sources */,
+				35F3F1ED29B0381900CFD317 /* CurrentTime.swift in Sources */,
 				35E53E57292B1BC2009E5BE6 /* LoginViewController.swift in Sources */,
 				352F25F9293078FA00ECC21A /* UsersTable.swift in Sources */,
 				359A5A58296CFFB00070982F /* AddButton.swift in Sources */,
@@ -1019,6 +1050,7 @@
 				35936DFA2935A3F6001CC3E8 /* StressViewController.swift in Sources */,
 				35610BE52978FAD70002EBE4 /* EmotionalMemoDetailButton.swift in Sources */,
 				3552B5C5298B748F004C7217 /* DeleteCounseling.swift in Sources */,
+				35F3F1EB29B037AE00CFD317 /* Alarm.swift in Sources */,
 				3552B5BA298B6E46004C7217 /* CounselingDetailViewController.swift in Sources */,
 				35610BE22978F8690002EBE4 /* EmotionalMemoDetalLabel.swift in Sources */,
 				350FC68C2971161C0023F97B /* EmotionalMemoSaveButton.swift in Sources */,
@@ -1111,7 +1143,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1165,7 +1197,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1191,12 +1223,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = KOKIHAMADA.MentalCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1221,12 +1254,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = KOKIHAMADA.MentalCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
