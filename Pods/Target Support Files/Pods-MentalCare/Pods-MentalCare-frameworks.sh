@@ -176,8 +176,10 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CLTimer/CLTimer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Material/Material.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Motion/Motion.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RKPieChart/RKPieChart.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RKSlider/RKSlider.framework"
@@ -188,8 +190,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/YSRadioButton/YSRadioButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CLTimer/CLTimer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Material/Material.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Motion/Motion.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RKPieChart/RKPieChart.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RKSlider/RKSlider.framework"

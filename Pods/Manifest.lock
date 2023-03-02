@@ -1,9 +1,46 @@
 PODS:
+  - CLTimer (0.1.4)
   - LTMorphingLabel (0.9.3)
   - Material (3.1.8):
     - Material/Core (= 3.1.8)
   - Material/Core (3.1.8):
     - Motion (~> 3.1.1)
+  - MaterialComponents/AnimationTiming (124.2.0)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/Cards (124.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Icons/Base (124.2.0)
+  - MaterialComponents/private/Icons/ic_check_circle (124.2.0):
+    - MaterialComponents/private/Icons/Base
+  - MaterialComponents/private/Math (124.2.0)
+  - MaterialComponents/Ripple (124.2.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - Motion (3.1.3):
     - Motion/Core (= 3.1.3)
   - Motion/Core (3.1.3)
@@ -16,8 +53,10 @@ PODS:
   - YSRadioButton (0.0.1)
 
 DEPENDENCIES:
+  - CLTimer
   - LTMorphingLabel
   - Material
+  - MaterialComponents/Cards
   - RKPieChart
   - RKSlider
   - SnapKit
@@ -28,8 +67,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CLTimer
     - LTMorphingLabel
     - Material
+    - MaterialComponents
     - Motion
     - RKPieChart
     - RKSlider
@@ -48,8 +89,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/sekies/YSRadioButton.git
 
 SPEC CHECKSUMS:
+  CLTimer: fdb92f944aa8ee7e1edd0fed6032d836c65ebdef
   LTMorphingLabel: f2b256e4fe665aac27f0d0e8ccdcd79590f0cd70
   Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
   RKPieChart: 8e643c505d24e61574f3a2fd6bd807403840b24b
   RKSlider: 617f37b2e166abf1531bbf2393e9f8800a673c10
@@ -59,6 +102,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   YSRadioButton: d36fff9507fc02527bbe44cc1211a201f42d1218
 
-PODFILE CHECKSUM: 82d191a1e9751cf45da8be9c643e934b3768371d
+PODFILE CHECKSUM: 039f5fec09b2c46da234ab8125788d029cb4632d
 
 COCOAPODS: 1.11.3

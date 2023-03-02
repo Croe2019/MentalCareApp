@@ -15,5 +15,7 @@ target 'MentalCare' do
  pod 'RKSlider'
  pod "RKPieChart"
  pod 'YSRadioButton', :git => 'https://github.com/sekies/YSRadioButton.git'
+ pod 'MaterialComponents/Cards'
+ pod 'CLTimer'
  
 end
