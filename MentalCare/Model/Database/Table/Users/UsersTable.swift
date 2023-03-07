@@ -5,13 +5,13 @@ import FirebaseStorage
 import FirebaseFirestore
 
 class UsersTable{
-    
+
     private var db: OpaquePointer?
     private var image_path = String()
     private let db_file: String = "MentalCare.db"
     
     public func CreateUsersTable(){
-        OpneDB()
+        OpenDB()
         let create_table = "CREATE TABLE UserData (id integer primary key autoincrement, name string, email string, password string, image_path string)"
         
         if sqlite3_exec(db, create_table, nil, nil, nil) != SQLITE_OK{
@@ -21,7 +21,7 @@ class UsersTable{
         }
     }
     
-    private func OpneDB(){
+    private func OpenDB(){
         
         let file_url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(self.db_file)
         
@@ -33,7 +33,7 @@ class UsersTable{
     }
         
     func insert(name: String, email: String, password: String){
-            OpneDB()
+            OpenDB()
             let default_image = UIImage(named: "default_image")
             let date = NSDate()
             let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
