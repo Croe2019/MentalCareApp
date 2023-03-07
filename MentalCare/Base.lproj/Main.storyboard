@@ -218,10 +218,6 @@
                                 <rect key="frame" x="31" y="71" width="332" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HAW-dA-YsC">
-                                        <rect key="frame" x="-62" y="57" width="332" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="起床時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYP-Um-YvO">
                                         <rect key="frame" x="8" y="16" width="80" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -247,6 +243,10 @@
                                     </button>
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-bx-ayq">
                                         <rect key="frame" x="-53" y="8" width="332" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </datePicker>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HAW-dA-YsC">
+                                        <rect key="frame" x="-53" y="57" width="332" height="52"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </datePicker>
                                 </subviews>
@@ -299,8 +299,15 @@
                     <connections>
                         <outlet property="alarm_card" destination="oUe-0R-5O8" id="2vC-I3-5GK"/>
                         <outlet property="bed_time_date_picker" destination="HAW-dA-YsC" id="n60-iR-1VG"/>
+                        <outlet property="bed_time_label" destination="9b6-j4-RKO" id="YZ6-Fg-ZcB"/>
                         <outlet property="focus_timer" destination="3EV-De-KtY" id="E9C-MC-Wq1"/>
+                        <outlet property="interval_button" destination="xaE-pi-7gb" id="FBS-pO-hC4"/>
+                        <outlet property="pomod_label" destination="AMs-xU-z8d" id="Ds7-Ld-mTM"/>
+                        <outlet property="save_button" destination="JNU-UD-R9a" id="oJB-T1-N0B"/>
+                        <outlet property="start_button" destination="peG-hf-CjR" id="UOQ-1t-U1r"/>
+                        <outlet property="stop_button" destination="mZJ-bK-jVJ" id="x18-bs-TfA"/>
                         <outlet property="wake_up_date_picker" destination="fgJ-bx-ayq" id="WgX-d4-T3C"/>
+                        <outlet property="wake_up_label" destination="wYP-Um-YvO" id="1UY-ls-aJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oga-3d-cPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

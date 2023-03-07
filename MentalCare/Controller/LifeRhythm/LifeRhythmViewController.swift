@@ -9,6 +9,7 @@ import UIKit
 import MaterialComponents
 import CLTimer
 import AVFoundation
+import SnapKit
 
 class LifeRhythmViewController: UIViewController {
 
@@ -17,6 +18,16 @@ class LifeRhythmViewController: UIViewController {
     @IBOutlet weak var wake_up_date_picker: UIDatePicker!
     @IBOutlet weak var bed_time_date_picker: UIDatePicker!
     @IBOutlet weak var focus_timer: CLTimer!
+    @IBOutlet weak var save_button: UIButton!
+    
+    @IBOutlet weak var start_button: UIButton!
+    @IBOutlet weak var stop_button: UIButton!
+    @IBOutlet weak var interval_button: UIButton!
+    
+    @IBOutlet weak var pomod_label: UILabel!
+    @IBOutlet weak var wake_up_label: UILabel!
+    @IBOutlet weak var bed_time_label: UILabel!
+    
     var player: AVAudioPlayer?
     
     let bed_time_alarm = Alarm()
@@ -38,7 +49,7 @@ class LifeRhythmViewController: UIViewController {
         
         wake_up_date_picker.datePickerMode = UIDatePicker.Mode.time
         wake_up_date_picker.setDate(Date(), animated: false)
-        
+        UISetting()
         // 25分間集中
         focus_time = 1500
         // 10分間休憩
@@ -52,6 +63,89 @@ class LifeRhythmViewController: UIViewController {
         
         if bed_time_alarm.sleepTimer != nil{
             bed_time_alarm.stopTimer()
+        }
+    }
+    
+    // SnapKitでUIの位置を設定する
+    private func UISetting(){
+        
+        // カードの位置
+        alarm_card.snp.makeConstraints { make in
+            
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(100)
+        }
+        
+        // 就寝時間の位置
+        bed_time_date_picker.snp.makeConstraints { make in
+            make.centerX.equalTo(80)
+            make.centerY.equalTo(8)
+        }
+        
+        // 起床時間の位置
+        wake_up_date_picker.snp.makeConstraints { make in
+            make.centerX.equalTo(80)
+            make.centerY.equalTo(57)
+        }
+        
+        // 起床時間のラベル
+        wake_up_label.snp.makeConstraints { make in
+            make.centerX.equalTo(-30)
+            make.centerY.equalTo(8)
+        }
+        
+        // 就寝時間のラベル
+        bed_time_label.snp.makeConstraints { make in
+            make.centerX.equalTo(-30)
+            make.centerY.equalTo(57)
+        }
+        
+        save_button.snp.makeConstraints { make in
+            make.height.equalTo(74)
+            make.width.equalTo(200)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(150)
+        }
+        
+        pomod_label.snp.makeConstraints { make in
+            // タイトルの大きさ、位置を設定する
+            make.height.equalTo(78)
+            make.width.equalTo(336)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(310)
+        }
+        
+        // タイマーの位置
+        focus_timer.snp.makeConstraints { make in
+            make.height.equalTo(175)
+            make.width.equalTo(332)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(450)
+            
+        }
+        
+        start_button.snp.makeConstraints { make in
+            
+            make.height.equalTo(35)
+            make.width.equalTo(83)
+            make.centerX.equalTo(100)
+            make.centerY.equalTo(611)
+        }
+        
+        stop_button.snp.makeConstraints { make in
+            
+            make.height.equalTo(35)
+            make.width.equalTo(83)
+            make.centerX.equalTo(200)
+            make.centerY.equalTo(611)
+        }
+        
+        interval_button.snp.makeConstraints { make in
+            
+            make.height.equalTo(35)
+            make.width.equalTo(83)
+            make.centerX.equalTo(300)
+            make.centerY.equalTo(611)
         }
     }
     
